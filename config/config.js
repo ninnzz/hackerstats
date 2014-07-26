@@ -8,7 +8,7 @@ var path = require('path'),
 			upload_dir : path.normalize(__dirname + '/../uploads/'),
 			logs_dir : path.normalize(__dirname + '/../logs/'),
 			temp_dir : path.normalize(__dirname + '/../temp'),
-			frontend_server_url : 'http://dev.freedom.tm:8000',
+			frontend_server_url : '*',
 			frontend_server_register_callback : '/auth/register/callback',
 			frontend_server_channel_callback : '/auth/channel/callback',
 			auth_server : {

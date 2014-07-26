@@ -105,22 +105,26 @@
     "awards": [{
         "type": 1,
         "rank": 1,
+        "code" : "place_1",
         "title": "1st Place",
         "team": "",
         "team_name": ""
     }, {
         "type": 1,
         "rank": 2,
+        "code" : "place_2",
         "title": "2st Place",
         "team": "",
         "team_name": ""
     }, {
         "type": 0,
         "rank": null,
-        "title": "Special",
+        "code" : "special_1",
+        "title": "Special Award",
         "team": "",
         "team_name": ""
     }, {
+        "code" : "regular",
         "title": "Participant",
         "team": null
     }]
