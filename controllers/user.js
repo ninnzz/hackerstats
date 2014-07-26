@@ -40,7 +40,7 @@ exports.auth_github_callback = function (req, res, next) {
     var data = util.get_data(['code','state'], [], req.query),
         get_access_token = function () {
             curl.post
-                .to('www.github.com', 443, '/login/oauth/access_token')
+                .to('github.com', 443, '/login/oauth/access_token')
                 .secured()
                 .send({
                     client_id : github_client_id,
