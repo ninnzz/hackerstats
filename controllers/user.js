@@ -92,26 +92,26 @@ exports.auth_github_callback = function (req, res, next) {
             } else {
                 //register the user
                 
-                user._id                    = github_userinfo.id;
-                user.email                  = github_userinfo.email;
-                user.name                   = github_userinfo.name;
-                user.address                = github_userinfo.location;
-                user.company                = github_userinfo.company;
-                user.github_access_token    = access_token;
-                user.avatar                 = github_userinfo.avatar_url;
-                user.github                 = github_userinfo.html_url;
-                user.facebook               = '';
-                user.twitter                = '';
+                user_info._id                    = github_userinfo.id;
+                user_info.email                  = github_userinfo.email;
+                user_info.name                   = github_userinfo.name;
+                user_info.address                = github_userinfo.location;
+                user_info.company                = github_userinfo.company;
+                user_info.github_access_token    = access_token;
+                user_info.avatar                 = github_userinfo.avatar_url;
+                user_info.github                 = github_userinfo.html_url;
+                user_info.facebook               = '';
+                user_info.twitter                = '';
 
-                user.hackathons_won         = 0;
-                user.hackathons_joined      = 0;
-                user.total_points           = 0;
-                user.hackathons             = [];
+                user_info.hackathons_won         = 0;
+                user_info.hackathons_joined      = 0;
+                user_info.total_points           = 0;
+                user_info.hackathons             = [];
 
-                user.badge_own              = 0;
-                user.badges                 = [];
+                user_info.badge_own              = 0;
+                user_info.badges                 = [];
 
-                console.log(user);
+                console.log(user_info);
 
                 mongo.collection('user')
                 .insert(user_info, done_registration);
