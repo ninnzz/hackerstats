@@ -44,7 +44,7 @@ exports.auth_github_callback = function (req, res, next) {
                 .secured()
                 .send({
                     client_id : github_client_id,
-                    client_secre : github_client_secret,
+                    client_secret : github_client_secret,
                     code : data.code,
                     redirect_uri : ''
                 })
