@@ -122,7 +122,7 @@ exports.auth_github_callback = function (req, res, next) {
                 logger.log('warn', 'Error inserting new user');
                 return next(err);
             }
-            delete user.access_token;
+            delete user_info.access_token;
             logger.log('info', 'Successfully added new user');    
             return res.send(user_info);
         };
