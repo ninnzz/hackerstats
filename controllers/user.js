@@ -64,6 +64,7 @@ exports.auth_github_callback = function (req, res, next) {
              curl.get
                 .to('api.github.com', 443, '/user')
                 .secured()
+                .add_header('user-agent','hackerstat')
                 .send({
                     access_token : access_token
                 })
