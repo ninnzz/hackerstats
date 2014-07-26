@@ -88,7 +88,7 @@ exports.auth_github_callback = function (req, res, next) {
             }
             console.log('====returned user=====');
             console.log(_data);
-            if ( _data && _data.length === 1) {
+            if (Object.keys(_data).length !== 0) {
 
                 _data.access_token = _data.github_access_token; 
                 delete _data.github_access_token;
