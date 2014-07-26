@@ -2,6 +2,7 @@ var config         = require(__dirname + '/../config/config'),
     util           = require(__dirname + '/../helpers/util'),
     logger         = require(__dirname + '/../lib/logger'),
     mysql          = require(__dirname + '/../lib/mysql'),
+    mongo           = require(__dirname + '/../lib/mongoskin'),
     curl           = require(__dirname + '/../lib/curl'),
     url            = require('url'),
     googleapis     = require('googleapis'),
@@ -26,7 +27,7 @@ exports.register = function (req, res, next) {
 
 exports.auth_github = function (req, res, next) {
  
-    logger.log('info', 'Redirecting to google for authentication');
+    logger.log('info', 'Redirecting to github for authentication');
     res.redirect( github_redirect_url + '?' +
         'client_id=' + github_client_id +
         '&redirect_uri=' + 
@@ -40,6 +41,8 @@ exports.auth_github_callback = function (req, res, next) {
     var data = util.get_data(['code','state'], [], req.query),
         access_token = '',
         token_type = '',
+        github_userinfo,
+        user_info = {};
         get_access_token = function () {
             curl.post
                 .to('github.com', 443, '/login/oauth/access_token')
@@ -75,8 +78,53 @@ exports.auth_github_callback = function (req, res, next) {
                 console.log(err);
                 return next(err);
             }
-            
-            res.send(_data); 
+            github_userinfo = _data;
+            mongo.collection('users')
+                .findOne({_id : github_userinfo.id}, check_if_registered);
+        },
+        check_if_registered = function (err, _data) {
+            if (err) {
+                return next(err);
+            }
+            console.log(_data);
+            if (false) {
+
+            } else {
+                //register the user
+                
+                user._id                    = github_userinfo.id;
+                user.email                  = github_userinfo.email;
+                user.name                   = github_userinfo.name;
+                user.address                = github_userinfo.location;
+                user.company                = github_userinfo.company;
+                user.github_access_token    = access_token;
+                user.avatar                 = github_userinfo.avatar_url;
+                user.github                 = github_userinfo.html_url;
+                user.facebook               = '';
+                user.twitter                = '';
+
+                user.hackathons_won         = 0;
+                user.hackathons_joined      = 0;
+                user.total_points           = 0;
+                user.hackathons             = [];
+
+                user.badge_own              = 0;
+                user.badges                 = [];
+
+                console.log(user);
+
+                mongo.collection('user')
+                .insert(user, done_registration);
+            }
+        },
+        done_registration = function (err, _data) {
+            if (err) {
+                logger.log('warn', 'Error inserting new user');
+                return next(err);
+            }
+            delete user.access_token;
+            logger.log('info', 'Successfully added new user');    
+            return res.send(user);
         };
 
     console.log('======DATA=========');
