@@ -95,7 +95,10 @@ exports.auth_github_callback = function (req, res, next) {
                 mongo.collection('user')
                     .update(
                         {_id : _data._id},
-                        { $set : { 'github_access_token' : _data.access_token } }
+                        { $set : { 'github_access_token' : _data.access_token } }, 
+                        function (err, _data) {
+                            console.log(_data);
+                        }
                     );
                 res.send(_data);
 
