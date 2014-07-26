@@ -38,8 +38,8 @@ exports.auth_github = function (req, res, next) {
 
 exports.auth_github_callback = function (req, res, next) {
     var data = util.get_data(['code','state'], [], req.query),
-        access_token,
-        token_type,
+        access_token = '',
+        token_type = '',
         get_access_token = function () {
             curl.post
                 .to('github.com', 443, '/login/oauth/access_token')
