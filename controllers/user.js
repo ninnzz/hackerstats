@@ -36,10 +36,10 @@ exports.auth_github = function (req, res, next) {
 };
 
 
-exports.auth_github_callback = function (req, res, _next) {
+exports.auth_github_callback = function (req, res, next) {
     var data = util.get_data(['code','state'], [], req.query),
         get_access_token = function () {
-            curl.get
+            curl.post
                 .to('www.github.com', 443, '/login/oauth/access_token')
                 .secured()
                 .send({
@@ -51,7 +51,9 @@ exports.auth_github_callback = function (req, res, _next) {
                 .then(get_email);
         },
         get_email = function (err, _data) {
-            console.log(err);
+            if (err) {
+                return next(err);
+            }
             console.log(_data);
         };
 
