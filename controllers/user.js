@@ -86,6 +86,7 @@ exports.auth_github_callback = function (req, res, next) {
             if (err) {
                 return next(err);
             }
+            console.log('====returned user=====');
             console.log(_data);
             if (false) {
 
