@@ -88,7 +88,16 @@ exports.auth_github_callback = function (req, res, next) {
             }
             console.log('====returned user=====');
             console.log(_data);
-            if (false) {
+            if ( _data && _data.length === 1) {
+
+                _data.access_token = _data.github_access_token; 
+                delete _data.github_access_token;
+                mongo.collection('user')
+                    .update(
+                        {_id : _data._id},
+                        { $set : { 'github_access_token' : _data.access_token } },
+                    );
+                res.send(_data);
 
             } else {
                 //register the user
@@ -104,6 +113,8 @@ exports.auth_github_callback = function (req, res, next) {
                 user_info.facebook               = '';
                 user_info.twitter                = '';
 
+                // store other details for faster transactions
+                // tradeoff for space :P
                 user_info.hackathons_won         = 0;
                 user_info.hackathons_joined      = 0;
                 user_info.total_points           = 0;
@@ -123,7 +134,9 @@ exports.auth_github_callback = function (req, res, next) {
                 logger.log('warn', 'Error inserting new user');
                 return next(err);
             }
+            user_info.access_token = user_info.access_token; 
             delete user_info.access_token;
+
             logger.log('info', 'Successfully added new user');    
             return res.send(user_info);
         };
@@ -140,50 +153,11 @@ exports.auth_github_callback = function (req, res, next) {
 };
 
 
-exports.login = function (req, res, next) {
-    var data = util.get_data(['email', 'password'], [], req.body),
-
-        start = function () {
-            logger.log('info', 'Someone is logging in');
-
-            if (typeof data === 'string') {
-                logger.log('warn', 'Error in required parameters');
-                return next(data);
-            }
-
-            data.source = 'self';
-            data.app_id = config.app_id;
-
-            logger.log('verbose', 'Logging in using auth server');
-            curl.post
-                .to(config.auth_server.host, config.auth_server.port, '/auth/login')
-                .send(data)
-                .then(send_response);
-        },
-
-        send_response = function (err, result) {
-            if (err) {
-                logger.log('warn', 'Error in logging in using auth server');
-                return next(err);
-            }
-
-            logger.log('verbose', 'Success in logging in using auth server');
-            res.send(result);
-       };
-
-    start();
-};
-
-
 exports.get_user = function (req, res, next) {
     var data,
 
         start = function () {
             logger.log('info', 'Someone is getting user information');
-
-            if (!req.access_token) {
-                return next('access_token is missing');
-            }
 
             if (req.params.id) {
                 logger.log('verbose', 'Found id from url');
