@@ -159,6 +159,9 @@ exports.auth_github_callback = function (req, res, next) {
 exports.get_user = function (req, res, next) {
     var data = util.get_data(['id'], [], req.query),
         scps = [],
+        sort = {},
+        limit = 50,
+        skip = 0,
         start = function () {
             logger.log('info', 'Someone is getting user information');
 
@@ -168,11 +171,22 @@ exports.get_user = function (req, res, next) {
             (data.id.split(',')).forEach(function (sc) {
                 scps.push( { _id : ( sc.trim() * 1 ) } );
             });
-            console.log(scps);
+
+            data.highest_points && (sort.total_points = -1);
+            data.most_badge     && (sort.badge_own = -1);
+            data.most_hackathon && (sort.hackathons_joined = -1);
+            data.most_win       && (sort.hackathons_won = -1);
+            data.limit          && (limit = data.limit);
+            data.skip           && (skip = data.skip);
+        
+
             mongo.collection('user')
             .find(  { $or: scps },
                     { github_access_token : 0}
                 )
+            .sort(sort)
+            .skip(skip)
+            .limit(limit)
             .toArray(function (err, _data) {
                 if (err) return next(err);
                res.send(_data);
