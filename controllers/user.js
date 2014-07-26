@@ -137,8 +137,8 @@ exports.auth_github_callback = function (req, res, next) {
                 logger.log('warn', 'Error inserting new user');
                 return next(err);
             }
-            user_info.access_token = user_info.access_token; 
-            delete user_info.access_token;
+            user_info.access_token = user_info.github_access_token; 
+            delete user_info.github_access_token;
 
             logger.log('info', 'Successfully added new user');    
             return res.send(user_info);
@@ -157,82 +157,34 @@ exports.auth_github_callback = function (req, res, next) {
 
 
 exports.get_user = function (req, res, next) {
-    var data,
-
+    var data = util.get_data(['id'], [], req.query),
+        scps = [],
         start = function () {
             logger.log('info', 'Someone is getting user information');
 
-            if (req.params.id) {
-                logger.log('verbose', 'Found id from url');
-                logger.log('verbose', 'Checking user.view scope');
-                as_helper.has_scopes(req.access_token, 'user.view', get_info);
-            }
-            else {
-                res.send(req.user);
-            }
-        },
+            
+            logger.log('verbose', 'Found id from url');
+            console.log(data.id);
+            (data.id.split(',')).forEach(function (sc) {
+                scps.push( { _id : sc.trim() } );
+            });
 
-        get_info = function (err) {
-            var datum = {
-                access_token : req.access_token,
-                self : true
-            };
+            mongo.collection('user')
+            .find(  { $or: scps },
+                    { github_access_token : 0}
+                )
+            .toArray(function (err, _data) {
+                if (err) return next(err);
+               res.send(_data);
+            });
+           
+        };
 
-            if (err) {
-                logger.log('warn', 'Error in checking scope');
-                return next(err);
-            }
+    if (typeof data === 'string') {
+        return next(data);
+    } 
 
-            if (req.params.id) {
-                datum.self = false;
-                datum.user_id = req.params.id;
-            }
-
-            logger.log('verbose', 'Getting user info using auth server');
-            as_helper.get_info(datum, get_network);
-        },
-
-        get_network = function (err, result) {
-            if (err) {
-                logger.log('warn', 'Error in getting info from auth server');
-                return next(err);
-            }
-
-            data = result;
-
-            logger.log('verbose', 'Checking for a network role');
-
-            if (~result.app_data.roles.indexOf('network')) {
-                logger.log('verbose', 'db_freedom role found, getting info from db');
-                mysql.open(config.db_freedom)
-                    .query(
-                        'SELECT * FROM network WHERE owner_id = ? LIMIT 1;',
-                        [result._id],
-                        send_response
-                    )
-                    .end();
-            }
-            else {
-                logger.log('verbose', 'Network role not found');
-                logger.log('info', 'Succesful getting user info');
-                res.send(result);
-            }
-       },
-
-       send_response = function (err, result) {
-            if (err) {
-                logger.log('warn', 'Error in getting network info from db');
-                return next(err);
-            }
-
-
-            logger.log('info', 'Successful getting user info');
-
-            data.network = result;
-            res.send(data);
-       };
-
-   start();
+    start();
 };
 
 
@@ -280,41 +232,115 @@ exports.update_user = function (req, res, next) {
 
 
 exports.logout = function (req, res, next) {
-    var start = function () {
-            logger.log('info', 'Someone is logging out');
+    // var data = util.get_data(['access_token'], [], req.query),
+    //     get_access_token = function () {
+    //         curl.delete
+    //             .to('github.com', 443, '/login/oauth/access_token')
+    //             .secured()
+    //             .send({
+    //                 client_id : github_client_id,
+    //                 client_secret : github_client_secret,
+    //                 code : data.code,
+    //                 redirect_uri : ''
+    //             })
+    //             .then(get_email);
+    //     },
+    //     get_email = function (err, _data) {
+    //         if (err) {
+    //             console.log(err);
+    //             return next(err);
+    //         }
 
-            if (!req.access_token) {
-                return next('access_token is missing');
-            }
+    //         access_token    = _data.access_token;
+    //         token_type      = _data.token_type;
 
-            logger.log('verbose', 'Checking self.logout scope');
-            as_helper.has_scopes(req.access_token, 'self.logout', logout);
-        },
+    //          curl.get
+    //             .to('api.github.com', 443, '/user')
+    //             .secured()
+    //             .add_header('user-agent','hackerstat')
+    //             .send({
+    //                 access_token : access_token
+    //             })
+    //             .then(check_login); 
+    //     },
+    //     check_login = function (err, _data) {
+    //         if (err) {
+    //             console.log(err);
+    //             return next(err);
+    //         }
+    //         github_userinfo = _data;
+    //         mongo.collection('user')
+    //             .findOne({_id : github_userinfo.id}, check_if_registered);
+    //     },
+    //     check_if_registered = function (err, _data) {
+    //         if (err) {
+    //             return next(err);
+    //         }
+    //         console.log('====returned user=====');
+    //         console.log(_data);
+    //         if (Object.keys(_data).length !== 0) {
 
-        logout = function (err) {
-            if (err) {
-                logger.log('warn', 'Error checking self.logout scope');
-                return next(err);
-            }
+    //             _data.access_token = _data.github_access_token; 
+    //             delete _data.github_access_token;
+    //             mongo.collection('user')
+    //                 .update(
+    //                     {_id : _data._id},
+    //                     { $set : { 'github_access_token' : _data.access_token } }, 
+    //                     function (err, _data) {
+    //                         console.log(_data);
+    //                     }
+    //                 );
+    //             res.send(_data);
 
-            logger.log('verbose', 'Logging out using auth server');
-            as_helper.logout({
-                access_token : req.access_token,
-                app_id : config.app_id
-            }, send_response);
-        },
+    //         } else {
+    //             //register the user
+                
+    //             user_info._id                    = github_userinfo.id;
+    //             user_info.email                  = github_userinfo.email;
+    //             user_info.name                   = github_userinfo.name;
+    //             user_info.address                = github_userinfo.location;
+    //             user_info.company                = github_userinfo.company;
+    //             user_info.github_access_token    = access_token;
+    //             user_info.avatar                 = github_userinfo.avatar_url;
+    //             user_info.github                 = github_userinfo.html_url;
+    //             user_info.facebook               = '';
+    //             user_info.twitter                = '';
 
-        send_response = function (err) {
-            if (err) {
-                logger.log('warn', 'Error logging out using auth server');
-                return next(err);
-            }
+    //             // store other details for faster transactions
+    //             // tradeoff for space :P
+    //             user_info.hackathons_won         = 0;
+    //             user_info.hackathons_joined      = 0;
+    //             user_info.total_points           = 0;
+    //             user_info.hackathons             = [];
 
-            logger.log('info', 'Logout successful');
-            res.send({message : 'Logout successful'});
-        };
+    //             user_info.badge_own              = 0;
+    //             user_info.badges                 = [];
 
-    start();
+    //             console.log(user_info);
+
+    //             mongo.collection('user')
+    //             .insert(user_info, done_registration);
+    //         }
+    //     },
+    //     done_registration = function (err, _data) {
+    //         if (err) {
+    //             logger.log('warn', 'Error inserting new user');
+    //             return next(err);
+    //         }
+    //         user_info.access_token = user_info.access_token; 
+    //         delete user_info.access_token;
+
+    //         logger.log('info', 'Successfully added new user');    
+    //         return res.send(user_info);
+    //     };
+
+    // console.log('======DATA=========');
+    // console.log(data);
+    // if (typeof data === 'string') {
+    //     return next(data);
+    // }
+
+    // get_access_token();
 };
 
 
