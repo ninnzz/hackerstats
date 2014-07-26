@@ -166,9 +166,9 @@ exports.get_user = function (req, res, next) {
             logger.log('verbose', 'Found id from url');
             console.log(data.id);
             (data.id.split(',')).forEach(function (sc) {
-                scps.push( { _id : sc.trim() } );
+                scps.push( { _id : ( sc.trim() * 1 ) } );
             });
-
+            console.log(scps);
             mongo.collection('user')
             .find(  { $or: scps },
                     { github_access_token : 0}
