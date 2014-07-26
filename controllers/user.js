@@ -172,12 +172,12 @@ exports.get_user = function (req, res, next) {
                 scps.push( { _id : ( sc.trim() * 1 ) } );
             });
 
-            data.highest_points && (sort.total_points = -1);
-            data.most_badge     && (sort.badge_own = -1);
-            data.most_hackathon && (sort.hackathons_joined = -1);
-            data.most_win       && (sort.hackathons_won = -1);
-            data.limit          && (limit = data.limit);
-            data.skip           && (skip = data.skip);
+            req.query.highest_points && (sort.total_points = -1);
+            req.query.most_badge     && (sort.badge_own = -1);
+            req.query.most_hackathon && (sort.hackathons_joined = -1);
+            req.query.most_win       && (sort.hackathons_won = -1);
+            req.query.limit          && (limit = req.query.limit);
+            req.query.skip           && (skip = req.query.skip);
         
 
             mongo.collection('user')
