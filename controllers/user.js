@@ -79,7 +79,7 @@ exports.auth_github_callback = function (req, res, next) {
                 return next(err);
             }
             github_userinfo = _data;
-            mongo.collection('users')
+            mongo.collection('user')
                 .findOne({_id : github_userinfo.id}, check_if_registered);
         },
         check_if_registered = function (err, _data) {
