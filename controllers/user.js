@@ -57,9 +57,9 @@ exports.auth_github_callback = function (req, res, next) {
                 console.log(err);
                 return next(err);
             }
-            console.log(_data);
-            access_token    = data._access_token;
-            token_type      = data._token_type;
+
+            access_token    = _data.access_token;
+            token_type      = _data.token_type;
 
              curl.get
                 .to('api.github.com', 443, '/user')
