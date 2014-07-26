@@ -50,7 +50,7 @@ var path = require('path'),
 			db_mongo : {
 				host : 'localhost',
 				port : 27017,
-				name : 'freedom'
+				name : 'hackerstat'
 			}
 		},
 		staging : {
