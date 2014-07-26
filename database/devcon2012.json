@@ -1,0 +1,127 @@
+{
+    "_id": "200000012",
+    "name": "DevCup 2012",
+    "start_date": 1345852800,
+    "end_date": 1345939200,
+    "location": "Meralco Multipurpose Hall",
+    "image": "http://ebmedia.eventbrite.com/s3-build/images/1213620/51344680362/1/logo.png",
+    "theme": "Solve a Filipino Problem",
+    "tags" : "social,welfare",
+    "description" : "This is a good description of the hackathon that we will be doing",
+    "total_teams": 38,
+    "total_apps": 18,
+    "photo_gallery_link": "https://www.facebook.com/media/set/?set=a.154008878109786.1073741830.153993134778027&type=3",
+    "judges": [{
+        "_id": "30000001",
+        "name": "Bryan Bibat"
+    }, {
+        "_id": "30000002",
+        "name": "Jen Yu"
+    }, {
+        "_id": "30000003",
+        "name": "Butch Landingin"
+    }, {
+        "_id": "30000004",
+        "name": "Peter Phillips"
+    }],
+    "sponsors_and_partners": [{
+        "gold_sponsors": [{
+            "_id": "40000001",
+            "name": "Smart DevNet"
+        }, {
+            "_id": "40000002",
+            "name": "BlackBerry"
+        }, {
+            "_id": "40000003",
+            "name": "_ideaSpace"
+        }, {
+            "_id": "40000004",
+            "name": "Accenture & Meralco "
+        }]
+    }, {
+        "silver_sponsors": [{
+            "_id": "40000005",
+            "name": "Sulit.com.ph"
+        }, {
+            "_id": "40000006",
+            "name": "10gen & Chikka"
+        }]
+    }, {
+        "technology_partners": [{
+            "_id": "40000007",
+            "name": "Amazon Web Services"
+        }, {
+            "_id": "40000008",
+            "name": "Atlassian"
+        }, {
+            "_id": "40000009",
+            "name": "Mozilla Philippines"
+        }, {
+            "_id": "40000010",
+            "name": "PayrollHero"
+        }, {
+            "_id": "40000011",
+            "name": "PinoyBBdev"
+        }, {
+            "_id": "40000012",
+            "name": "Iron.io"
+        }, {
+            "_id": "40000013",
+            "name": "AppSumo"
+        }, {
+            "_id": "40000014",
+            "name": "Github"
+        }]
+    }, {
+        "media_partners": [{
+            "_id": "40000015",
+            "name": "SGE"
+        }, {
+            "_id": "40000016",
+            "name": "The New Media"
+        }, {
+            "_id": "40000017",
+            "name": "TechNode"
+        }, {
+            "_id": "40000018",
+            "name": "Newsbytes"
+        }, {
+            "_id": "40000019",
+            "name": "1stwebdesigner"
+        }, {
+            "_id": "40000020",
+            "name": "WhenInManila"
+        }, {
+            "_id": "40000021",
+            "name": "E27"
+        }, {
+            "_id": "40000022",
+            "name": "The Next Web"
+        }, {
+            "_id": "40000023",
+            "name": "Tech In Asia & Digital News Asia"
+        }]
+    }],
+    "awards": [{
+        "type": 1,
+        "rank": 1,
+        "title": "1st Place",
+        "team": "",
+        "team_name": ""
+    }, {
+        "type": 1,
+        "rank": 2,
+        "title": "2st Place",
+        "team": "",
+        "team_name": ""
+    }, {
+        "type": 0,
+        "rank": null,
+        "title": "Special",
+        "team": "",
+        "team_name": ""
+    }, {
+        "title": "Participant",
+        "team": null
+    }]
+}
