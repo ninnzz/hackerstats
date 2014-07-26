@@ -3,6 +3,17 @@ var config = require(__dirname + '/../config/config'),
 	mongo = require(__dirname + '/../lib/mongoskin'),
 	util = require(__dirname + '/../helpers/util');
 
+
+
+
+exports.upload_hackathon_data = function (req, res, next) {
+
+
+
+
+
+};
+
 exports.find_applicants = function(req, res, next){
 	var find_non_approved = function (status, _data) {
 

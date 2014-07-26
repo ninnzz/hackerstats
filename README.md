@@ -1,5 +1,15 @@
-Freedom! Node Back-end
+HackerStats
 ====================
+There are so many hackathons held in each places each year. Some participants are already hackathon junkees while some, over years of hackathon experience,  have contributed much to the software development industry.                                                                                     This application aims to record all the participants, winnings, hackathons, organizers and projects done in all hackathons we can find. We aim to provide people of the following:
+
+1) Accurate rankings of hackathon participants by giving corresponding points for joining and winning hackathons. Other activities are also credited so that it will add up to their overall ranking (same as those you see in codetoki,dotabuff etc etc).
+
+2) Comprehensive analysis and statistics about the trends of data we can gather from hackathons. Just imagine being able to tell "what kind of tech stack are usually used on disaster-themed hackathon" or "be able to show type applications (mobile,web,etc) being created during humanitarian-themed hackathons".
+
+3) Provide a platform where developers, organisers, dev evangelists and technopreneurs can track possible business prospects, developer hires and project collaboration.
+
+And of course we want to promote the competitive attitude of developers :)
+
 
 Running the Application
 ---------------------
@@ -49,17 +59,14 @@ Directory Structure
 	config/
 		config.js			-- contains server configuration e.g. port, public directory
 		router.js			-- contains routes
-		scopes.js			-- contains scopes, automatically imported by config.js
-	controllers/			-- contains controllers, duh.
+	controllers/			-- contains controllers/logic for data processing.
 	crawler/				-- crawler prototypes
-	database/
-		build.sql			-- contains build script for our mysql database
+	database/				-- data related files/exports
 	helpers/				-- contains utility scripts
 	lib/					-- contains middlewares, database wrappers, custom objects
 	logs/					-- for production env only
 	.gitignore				-- list of ignored files
-	bw-server.js			-- crawler's server
-	Makefile
+	
 	nodemon.json			-- nodemon's config
 	package.json
 	README.md				-- me
