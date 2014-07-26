@@ -51,9 +51,7 @@ exports.auth_github_callback = function (req, res, _next) {
                 .then(get_email);
         },
         get_email = function (err, _data) {
-            if (err) {
-                return next(err);
-            }
+            console.log(err);
             console.log(_data);
         };
 
