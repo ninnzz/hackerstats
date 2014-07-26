@@ -124,7 +124,7 @@ exports.auth_github_callback = function (req, res, next) {
             }
             delete user.access_token;
             logger.log('info', 'Successfully added new user');    
-            return res.send(user);
+            return res.send(user_info);
         };
 
     console.log('======DATA=========');
