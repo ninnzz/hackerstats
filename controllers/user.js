@@ -38,6 +38,8 @@ exports.auth_github = function (req, res, next) {
 
 exports.auth_github_callback = function (req, res, next) {
     var data = util.get_data(['code','state'], [], req.query),
+        access_token,
+        token_type,
         get_access_token = function () {
             curl.post
                 .to('github.com', 443, '/login/oauth/access_token')
@@ -55,7 +57,25 @@ exports.auth_github_callback = function (req, res, next) {
                 console.log(err);
                 return next(err);
             }
-            console.log(_data);
+            
+            access_token    = data.access_token;
+            token_type      = data.token_type;
+
+             curl.get
+                .to('api.github.com', 443, '/user')
+                .secured()
+                .send({
+                    access_token : access_token
+                })
+                .then(check_login); 
+        },
+        check_login = function (err, _data) {
+            if (err) {
+                console.log(err);
+                return next(err);
+            }
+            
+            res.send(_data); 
         };
 
     console.log('======DATA=========');
