@@ -18,13 +18,6 @@ var config         = require(__dirname + '/../config/config'),
     github_state = 't15w1LLn0tB3guEs5@bL3';
 
 
-exports.register = function (req, res, next) {
-    var data = req.body;
-
-    
-};
-
-
 exports.auth_github = function (req, res, next) {
  
     logger.log('info', 'Redirecting to github for authentication');

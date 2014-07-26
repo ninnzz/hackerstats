@@ -1,5 +1,6 @@
 var loc			= __dirname + '/../controllers/',
 	user 		= require(loc + 'user'),
+	hackathon 	= require(loc + 'hackathon'),
 	admin 		= require(loc + 'admin');
 
 module.exports	= function (router, logger) {
@@ -16,9 +17,13 @@ module.exports	= function (router, logger) {
 
 	router.get ('/auth',		user.auth_github);
 	router.get ('/auth/redirect',		user.auth_github_callback);
-	router.get ('/user/:id?', 	user.get_user);
+	router.get ('/user', 	user.get_user);
 	router.get ('/logout', 		user.logout);
 	router.put ('/user', 		user.update_user);
+	
+	router.get ('/hackathon', 	hackathon.get_hackathon);
+
+	router.post ('/admin/import_hackathon', 	admin.upload_hackathon_data);
 	
 
 	router.all('*', function (req, res) {

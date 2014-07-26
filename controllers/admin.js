@@ -7,7 +7,50 @@ var config = require(__dirname + '/../config/config'),
 
 
 exports.upload_hackathon_data = function (req, res, next) {
+     var hackathon_data,
+        start = function () {
+            
+            req.busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
+                var temp = filename.split('.');
+                
+                if (temp[temp.length - 1] !== 'json') {
+                    return next('Invalid file type');
+                }
+                file.on('data', function(data) {
+                    hackathon_data = data;
+                  });
+                  file.on('end', function() {
+                    console.log('File [' + fieldname + '] Finished');
+                  });
+                
+            });
 
+            req.busboy.on('finish', function () {
+                try {
+                    hackathon_data = JSON.parse(hackathon_data);
+
+                    mongo.collection('hackathon')
+                        .insert(hackathon_data, done);
+                } catch (e) {
+                    return next (e);
+                }
+            });
+
+            req.pipe(req.busboy);
+           
+        },
+        done = function (err, _data) {
+            if (err) {
+                return next(err);
+            }
+            return res.send(hackathon_data);
+        };
+
+    // if (typeof data === 'string') {
+    //     return next(data);
+    // } 
+
+    start();
 
 
 
