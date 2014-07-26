@@ -176,8 +176,8 @@ exports.get_user = function (req, res, next) {
             req.query.most_badge     && (sort.badge_own = -1);
             req.query.most_hackathon && (sort.hackathons_joined = -1);
             req.query.most_win       && (sort.hackathons_won = -1);
-            req.query.limit          && (limit = req.query.limit);
-            req.query.skip           && (skip = req.query.skip);
+            req.query.limit          && (limit = req.query.limit * 1);
+            req.query.skip           && (skip = req.query.skip * 1);
         
 
             mongo.collection('user')
