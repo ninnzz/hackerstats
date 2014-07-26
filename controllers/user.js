@@ -1,5 +1,4 @@
 var config         = require(__dirname + '/../config/config'),
-    as_helper      = require(__dirname + '/../helpers/auth_server'),
     util           = require(__dirname + '/../helpers/util'),
     logger         = require(__dirname + '/../lib/logger'),
     mysql          = require(__dirname + '/../lib/mysql'),
@@ -14,7 +13,8 @@ var config         = require(__dirname + '/../config/config'),
     github_client_id    = '584246b7d1091f1b3872',
     github_client_secret    = '8bb9e671ab2f959a7db67c55f7721c7e53b462c3',
     github_redirect_url     = 'https://github.com/login/oauth/authorize',
-    auth_redirect_url       = 'http://thissite.com/auth/redirect';
+    auth_redirect_url       = 'http://thissite.com/auth/redirect',
+    github_state = 't15w1LLn0tB3guEs5@bL3';
 
 
 exports.register = function (req, res, next) {
@@ -30,125 +30,42 @@ exports.auth_github = function (req, res, next) {
     res.redirect( github_redirect_url + '?' +
         'client_id=' + github_client_id +
         '&redirect_uri=' + 
-        '&scope=user,public_repo'+
-        '&state=t15w1LLn0tB3guEs5@bL3'
+        '&scope=user,public_repo' +
+        '&state=' + github_state
     );
 };
 
 
 exports.auth_github_callback = function (req, res, _next) {
-    var tokens,
-
-        next = function (err) {
-            logger.log('error', err);
-            logger.log('info', 'Redirecting to error endpoint');
-            res.redirect(config.frontend_server_url + '/error');
+    var data = util.get_data(['code','state'], [], req.query),
+        get_access_token = function () {
+            curl.get
+                .to('www.github.com', 443, '/login/oauth/access_token')
+                .secured()
+                .send({
+                    client_id : github_client_id,
+                    client_secre : github_client_secret,
+                    code : data.code,
+                    redirect_uri : ''
+                })
+                .then(get_email);
         },
-
-        start = function () {
-            logger.log('info', 'Received google\'s callback');
-            logger.log('verbose', 'Getting token using code', req.query.code);
-            oauth2_client.getToken(req.query.code, get_tokens);
-        },
-
-        get_tokens = function(err, result) {
+        get_email = function (err, _data) {
             if (err) {
-                logger.log('warn', 'Error getting tokens using', req.query.code);
                 return next(err);
             }
-
-            tokens = result;
-            oauth2_client.setCredentials(result);
-            logger.log('verbose', 'Discovering oauth2 v2 API');
-            googleapis
-                .discover('oauth2', 'v2')
-                .execute(get_client);
-        },
-
-        get_client = function (err, result) {
-            if (err) {
-                logger.log('warn', 'Error discovering oauth2 v2');
-                return next(err);
-            }
-
-            logger.log('verbose', 'Getting userinfo with auth client');
-            result
-                .oauth2.userinfo.get()
-                .withAuthClient(oauth2_client)
-                .execute(login_to_AS);
-        },
-        login_to_AS = function (err, result) {
-            if (err) {
-                logger.log('warn', 'Error discovering oauth2 v2');
-                return next(err);
-            }
-
-            logger.log('silly', tokens);
-            result.access_token = tokens.access_token;
-            result.refresh_token = tokens.refresh_token;
-            logger.log('verbose', 'Logging in using auth server');
-            as_helper.login(result, done);
-        },
-
-        done = function (err, user, is_registered) {
-            var scopes;
-
-            if (err) {
-                logger.log('warn', 'Error logging in using auth server');
-                return next(err);
-            }
-
-            if (is_registered) {
-                scopes = user
-                        .user_data['data_' + config.app_id]
-                        .roles
-                        .map(function (a) {
-                            return config.scopes[a];
-                        }).join(', ');
-
-                logger.log('verbose', 'User found from auth server, getting access token');
-                as_helper.get_access_token({
-                    user_id : user.user_data._id,
-                    scope_token : user.scope_token,
-                    scopes : scopes
-                }, send_response);
-            }
-            else {
-                logger.log('verbose', 'User not found from auth server, registering');
-                curl.post
-                    .to(config.auth_server.host, config.auth_server.port, '/user/register')
-                    .send({
-                        app_id : config.app_id,
-                        scopes : config.scopes.all + ',' + config.scopes.recruiter,
-                        email : user.email || user.emails[0],
-                        google_refresh_token : user.refresh_token,
-                        fname : user.given_name || '',
-                        lname : user.family_name || '',
-                        avatar : user.picture,
-                        roles : ['all', 'recruiter'],
-                        referrer : req.query.state.split('|')[1],
-                        referral_link : util.unique_short_string(6)
-                    })
-                    .then(send_response);
-            }
-        },
-
-        send_response = function (err, result) {
-            var redirect_uri = config.frontend_server_url
-                    + config.frontend_server_register_callback
-                    + '?access_token='
-                    + (result.access_token || result);
-
-            if (err) {
-                logger.log('warn', 'Error from getting access token or registering');
-                return next(err);
-            }
-
-            logger.log('info', 'Redirecting to', redirect_uri);
-            res.redirect(redirect_uri);
+            console.log(_data);
         };
 
-    start();
+    console.log('======DATA=========');
+    console.log(data);
+    if (typeof data === 'string') {
+        return next(data);
+    }
+    if (data.state !== github_state) {
+        return next('Operation not permitted');
+    }
+    get_access_token();
 };
 
 

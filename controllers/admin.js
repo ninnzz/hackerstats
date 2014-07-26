@@ -1,8 +1,7 @@
 var config = require(__dirname + '/../config/config'),
 	mysql = require(__dirname + '/../lib/mysql'),
 	mongo = require(__dirname + '/../lib/mongoskin'),
-	util = require(__dirname + '/../helpers/util'),
-	as_helper = require(__dirname + '/../helpers/auth_server');
+	util = require(__dirname + '/../helpers/util');
 
 exports.find_applicants = function(req, res, next){
 	var find_non_approved = function (status, _data) {
