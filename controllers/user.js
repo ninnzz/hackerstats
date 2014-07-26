@@ -114,7 +114,7 @@ exports.auth_github_callback = function (req, res, next) {
                 console.log(user);
 
                 mongo.collection('user')
-                .insert(user, done_registration);
+                .insert(user_info, done_registration);
             }
         },
         done_registration = function (err, _data) {
