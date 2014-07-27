@@ -202,7 +202,7 @@ exports.get_teams = function (req, res, next) {
         
 
             mongo.collection('teams')
-            .find( condition2,  condition, {members : 1})
+            .find( condition2,  condition, {members : 1, hackathons.$ : 1})
             .sort(sort)
             .skip(skip)
             .limit(limit)
