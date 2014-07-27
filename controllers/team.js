@@ -42,7 +42,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
         user_info = {};
         get_team_member_info = function () {
             
-            (data.id.split(',')).forEach(function (sc) {
+            (data.user_ids.split(',')).forEach(function (sc) {
                 scps.push( { _id : ( sc.trim() * 1 ) } );
             });
 
