@@ -1,0 +1,69 @@
+{
+    "value": [{
+        "_id": "team1",
+        "hackers": [{
+            "id": "123123123",
+            "name": "ajejeje",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }, {
+            "id": "123123124",
+            "name": "ajejeje3",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }],
+        "hackathons": [{
+            "hackathon_id": "hackathon1",
+            "team_name": "APPNimbus",
+            "app_name": "Bukas Palad",
+            "app_description": "Self-hosted Donation and Resources Management System",
+            "points": 37,
+            "tech_stack": [
+                "php?",
+                "msyql?"
+            ]
+        }]
+    }, {
+        "_id": "team2",
+        "hackers": [{
+            "id": "123123121",
+            "name": "ajejeje",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }, {
+            "id": "123123122",
+            "name": "ajejeje3",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }],
+        "hackathons": [{
+            "hackathon_id": "hackathon1",
+            "team_name": "APPNimbus",
+            "app_name": "Bukas Palad",
+            "app_description": "Self-hosted Donation and Resources Management System",
+            "points": 37,
+            "tech_stack": [
+                "php?",
+                "msyql?"
+            ]
+        }]
+    }, {
+        "_id": "team3",
+        "hackers": [{
+            "id": "123123126",
+            "name": "ajejeje",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }, {
+            "id": "123123127",
+            "name": "ajejeje3",
+            "image": "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10384738_724804960898709_3535750827005224295_n.jpg"
+        }],
+        "hackathons": [{
+            "hackathon_id": "hackathon1",
+            "team_name": "APPNimbus",
+            "app_name": "Bukas Palad",
+            "app_description": "Self-hosted Donation and Resources Management System",
+            "points": 37,
+            "tech_stack": [
+                "php?",
+                "msyql?"
+            ]
+        }]
+    }]
+}

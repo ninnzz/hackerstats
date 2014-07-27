@@ -1,0 +1,809 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"attach",
+				"attachmentModel"
+			],
+			[
+				"total",
+				"totalVideoPages"
+			],
+			[
+				"feauredVide",
+				"featuredVideosSkip"
+			],
+			[
+				"con",
+				"controllerName"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"retur",
+				"returnGames"
+			],
+			[
+				"exis",
+				"existingKey"
+			],
+			[
+				"plat",
+				"platforms"
+			],
+			[
+				"value",
+				"valuesCheck"
+			],
+			[
+				"youtub",
+				"youtube_id"
+			],
+			[
+				"array_fil",
+				"array_filter"
+			],
+			[
+				"update",
+				"updateResponse"
+			],
+			[
+				"refres",
+				"refresh_token"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"itera",
+				"iterator_to_array"
+			],
+			[
+				"routhP",
+				"routePathAction"
+			],
+			[
+				"func_",
+				"func_get_args"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"rout",
+				"routePathAction"
+			],
+			[
+				"loaded",
+				"loadedVideo"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/aldrinbautista/Documents/angelhack/global/style.css",
+			"settings":
+			{
+				"buffer_size": 803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "head.php",
+			"settings":
+			{
+				"buffer_size": 1016,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n<script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>\n<script type=\"text/javascript\">\n	var hackathons = [];\n\n	var template = function(templateHTML, data) {\n		\n	};\n</script>\n\n<?php \n	include(__DIR__.'/../pages/hackathonlist/scripts.php');\n?>\n</body>",
+			"file": "scripts.php",
+			"file_size": 288,
+			"file_write_time": 130508690170000000,
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/aldrinbautista/Documents/angelhack/dummyjs/hackathons.json",
+			"settings":
+			{
+				"buffer_size": 10712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/aldrinbautista/Documents/angelhack/pages/hackathonlist/style.css",
+			"settings":
+			{
+				"buffer_size": 1214,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/aldrinbautista/Documents/angelhack/pages/hackathonlist/scripts.php",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "body.php",
+			"settings":
+			{
+				"buffer_size": 80,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sspp",
+				"Set Syntax: PHP"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"colorsu",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssxml",
+				"Set Syntax: XML"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/aldrinbautista/Documents/angelhack",
+		"/Users/aldrinbautista/Documents/angelhack/default",
+		"/Users/aldrinbautista/Documents/angelhack/dummyjs",
+		"/Users/aldrinbautista/Documents/angelhack/global",
+		"/Users/aldrinbautista/Documents/angelhack/pages",
+		"/Users/aldrinbautista/Documents/angelhack/pages/hackathonlist"
+	],
+	"file_history":
+	[
+		"/Users/aldrinbautista/Documents/angelhack/hackathonlist/body.php",
+		"/Users/aldrinbautista/Documents/angelhack/hackathonlist/style.css",
+		"/Users/aldrinbautista/Documents/angelhack/default/header.php",
+		"/Users/aldrinbautista/Documents/angelhack/default/body.php",
+		"/Users/aldrinbautista/Documents/angelhack/index.php",
+		"/Users/aldrinbautista/Documents/angelhack/default/scripts.php",
+		"/Users/aldrinbautista/Documents/angelhack/default/head.php",
+		"/Users/aldrinbautista/Documents/angelhack/scripts.php",
+		"/Users/aldrinbautista/Documents/angelhack/foot.php",
+		"/Users/aldrinbautista/Documents/angelhack/body.php",
+		"/Users/aldrinbautista/Documents/angelhack/head.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/themes/facebook_no_bar/template/chatrooms_room.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Model/RouteFilter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/DataWriter/RouteFilter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ControllerAdmin/RouteFilter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/SabreDav/RootDirectory.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Extend/XenForo/Model/ThreadRedirect.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/includes/classes/Smarty/plugins/function.counter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Option/SpamThreadAction.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Model/Counters.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/CronEntry/Counters.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Pdf/FileParser/Font/OpenType/TrueType.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Model/ThreadRedirect.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Router.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ViewPublic/Login/CsrfTokenRefresh.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ViewAdmin/Login/CsrfTokenRefresh.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ViewAdmin/Tools/CacheRebuild.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ViewPublic/Login/PostRedirect.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Deferred/EmailTemplateReparse.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Deferred/AdminTemplateReparse.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Deferred/TemplateReparse.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Option/Twitter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/cache/39e14f0b875e5a114689a4ee94945e13352f2173.file.pages_footer.tpl.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/install/layout/pages_footer.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/admin/layout/pages_footer.tpl",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/public/debug/layout/footer.php",
+		"/Library/WebServer/Documents/asiafreedom/sara/footer.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/FileOutput.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/Template/20140101.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/Template/20130831.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/LoadClass/20131003.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/LoadClass/20130625.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/InitDependencies/20140401.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/InitDependencies/20140101.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/InitDependencies/20130730.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/FrontControllerPostView/20130522.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/ControllerPreDispatch/20140326.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/ControllerPreDispatch/20131003.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/ControllerPreDispatch/20130828.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/UserFieldCats/Listener/TemplateHook.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/UserFieldCats/Listener/TemplateCreate.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/UserFieldCats/Listener/LoadClass.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/UserFieldCats/Listener/FileHealthCheck.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomPostFields/Listener/TemplateHook.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomPostFields/Listener/LoadClass.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomPostFields/Listener/FileHealthCheck.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/TemplateHook.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/TemplateCreate.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/LoadClass.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/FrontControllerPostView.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/FileHealthCheck.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/ContainerAdminParams.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/AdminImages/Listener/LoadClass.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/AdminImages/Listener/FileHealthCheck.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/ShortUrl/AbstractShortener.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/AnyTV/Listeners/ViewPublic.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/AnyTV/Listeners/NavigationTabs.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/TemplateHook.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/TemplateCreate.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/Template.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/LoadClass.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/InitDependencies.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/FrontControllerPostView.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/ControllerPreDispatch.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/SimplePortal/Listener/Proxy.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/SimplePortal/Listener/Model.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/SimplePortal/Listener/DataWriter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/SimplePortal/Listener/Controller.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/SimplePortal/Listener/Bb.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/ViewPublic.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/Template.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/NavTabs.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/Model.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/DataWriter.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/Controller.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/BbCode.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/Template.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/NavTabs.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/Model.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/Init.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/Controller.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Listener/BbCode.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/DeveloperGarden/Response/SecurityTokenServer/SecurityTokenResponse.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/UserFieldCats/Listener/TemplatePostRender.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomPostFields/Listener/TemplatePostRender.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/CustomFields/Listener/TemplatePostRender.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Google/Service/Urlshortener.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Waindigo/Listener/TemplatePostRender.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Block/Listener/RecentThreadx5.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Block/Listener/RecentAttachments.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Listener/Route.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/ShortUrl/Shortener.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Route/PrefixAdmin/CodeEventListeners.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/DataWriter/CodeEventListener.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ControllerAdmin/CodeEventListener.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/js/xenforo/full/event_listener.js",
+		"/Library/WebServer/Documents/asiafreedom/zh/js/xenforo/event_listener.js",
+		"/Library/WebServer/Documents/asiafreedom/sara/live_shows.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Sabre/Sabre/DAV/Locks/LockInfo.php",
+		"/Library/WebServer/Documents/asiafreedom/log.txt",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Option/ImageLibrary.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/ControllerAdmin/Home.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Pdf/Resource/Font/Simple/Standard/HelveticaOblique.php",
+		"/Library/WebServer/Documents/asiafreedom/sara/header.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Route/Prefix/LinkForums.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/XenForo/Route/PrefixAdmin/LinkForums.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/DeveloperGarden/Wsdl/TokenService.wsdl",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/Block/Option/RanksToplist.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/admin/includes/tiny_mce/plugins/advlink/css/advlink.css",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/Yahoo/InlinkDataResult.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/admin/includes/tiny_mce/plugins/advlink/js/advlink.js",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/Zend/Service/Yahoo/InlinkDataResultSet.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/arrowchat/admin/includes/tiny_mce/themes/advanced/js/link.js",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Model/Userlinks.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/DataWriter/Userlinks.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRporta/DataWriter/Catlinks.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/Model/Keylinks.php",
+		"/Library/WebServer/Documents/asiafreedom/zh/library/EWRmedio/DataWriter/Keylinks.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Library/WebServer/Documents/asiafreedom/zh"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"image\" : \"http://ebmedia.eventbrite.com/s3-build/images/1213620/51344680362/1/logo.png\"",
+			"				",
+			"<a class=\"details-button\"",
+			"<a class=\"details-button\" href=\"#\">",
+			"<a href=\"#\">",
+			"<span class=\"details-button\">POP</span>",
+			"exit",
+			";\n",
+			"footer_links",
+			"getAttachment",
+			"inserttemporary",
+			"explode",
+			"platform",
+			"nextText",
+			"prevText",
+			"prev",
+			"preg",
+			"Prev",
+			"setstreams",
+			"getStream",
+			"notoriginal",
+			"notOriginal",
+			"playlist",
+			"loadplaylist",
+			"window.open",
+			"phrase",
+			"loadshares",
+			".render",
+			"loadshares",
+			"loadcomments",
+			"limit",
+			"12",
+			"<li class=\"option\"><i class=\"fa ",
+			"i class=\"fa",
+			"angle-down",
+			"height",
+			"max-",
+			"height",
+			"margin",
+			"DROPDOWN",
+			"<li class=\"option\">option</li>\n			<li class=\"option\">option</li>\n			<li class=\"option\">option</li>\n			<li class=\"option\">option</li>\n			<li class=\"option\">option</li>",
+			"cloud",
+			"YOLO",
+			"width",
+			"template",
+			"getObjectFieldTypeMap",
+			"game",
+			"moreCOmments",
+			"save",
+			"save()",
+			"personal",
+			"custom",
+			"function action",
+			"action",
+			"save()",
+			"save",
+			"writer",
+			"action",
+			"user",
+			",",
+			"getstream",
+			"getVideos",
+			"Stream",
+			"showStream",
+			"getuserstreams",
+			"getStreamCallback",
+			"setStreams",
+			"usrstrms",
+			"loadStream",
+			"showstream",
+			"_Featured",
+			"getPlaylistContents",
+			"getVideos",
+			"showvideo",
+			".click()",
+			"clock",
+			"getVideos",
+			"console.log",
+			"player",
+			"documentready",
+			"playerready",
+			"getvideos",
+			"getplaylistcontents",
+			"play",
+			"var play",
+			"play",
+			"clicked",
+			"getvideos",
+			"getplaylistcontentsfgetvideos",
+			"getplaylistcontents",
+			"documentready",
+			"isshows",
+			"viewadmin_featured",
+			"action",
+			"exit",
+			"setAccessToken",
+			"setAccessTOken",
+			"googleclient",
+			"ate",
+			"option",
+			"getroutematch",
+			"games",
+			"theme",
+			"hash",
+			"confirmkeys",
+			"configmkeys",
+			"path",
+			"pagh",
+			"getplaylistcontents",
+			"getVideos",
+			"getPlaylistContents",
+			"getPlaylistContsnts",
+			"&",
+			"code",
+			"redirect",
+			"&",
+			"\n",
+			"&",
+			"redirect",
+			"&",
+			"vDGZbb3_bZurvZ7Q",
+			"&",
+			" ",
+			"#skills",
+			"tagsinput",
+			"showDetails",
+			"view",
+			"echo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/aldrinbautista/Documents/angelhack/global/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								618,
+								618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 74.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "head.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/aldrinbautista/Documents/angelhack/dummyjs/hackathons.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3609,
+								3609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1675.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/aldrinbautista/Documents/angelhack/pages/hackathonlist/style.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/aldrinbautista/Documents/angelhack/pages/hackathonlist/scripts.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "body.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 80,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "angelhack.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"homelink",
+				"zh/library/EWRmedio/ViewPublic/MediaLikeConfirmed.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/gamerstm.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
