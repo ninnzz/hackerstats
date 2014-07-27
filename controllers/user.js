@@ -164,7 +164,7 @@ exports.get_user = function (req, res, next) {
             
             logger.log('verbose', 'Found id from url');
             
-            if (data.id) {
+            if (req.query.id) {
                 (data.id.split(',')).forEach(function (sc) {
                     scps.push( { _id : ( sc.trim() * 1 ) } );
                 });
