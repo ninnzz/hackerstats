@@ -618,12 +618,12 @@
 	var showTeams = function(e) {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
 				$('#teams').fadeIn().promise().done(function(e) {
-					$.getJSON('http://192.168.43.13:8000/team?highest_ponts=1', function (ee) {
+					$.getJSON('/team?highest_ponts=1', function (ee) {
 						super_string = '';
 
 						ee.forEach(function (b, ii) {
 
-							$.getJSON('http://192.168.43.13:8000/user?id='+b.members.join(','), function (e) {
+							$.getJSON('/user?id='+b.members.join(','), function (e) {
 
 								string = '\
 								<div class="team-container '+((ii===0) ? 'first' : '')+'">\
@@ -671,7 +671,7 @@
 	var showHackers = function(e) {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
 			$('#hackers').fadeIn().promise().done(function(e) {
-				$.getJSON('http://192.168.43.13:8000/user?highest_ponts=1', function (e) {
+				$.getJSON('/user?highest_ponts=1', function (e) {
 					var string = '<div class="team-container first">\
 						<a class="hacker" data-id="1" href="#">\
 							<img src="'+e[0].avatar+'" />\
@@ -795,7 +795,7 @@
 					$('#evie_date').html(hackathon.duration);
 					$('#evie_participants').html(hackathon.total_teams + ' teams participated');
 
-					$.get('http://192.168.43.13:8000/team?highest_ponts=1&id=' + id, function(ee) {
+					$.get('/team?highest_ponts=1&id=' + id, function(ee) {
 						var teams = ee.value;
 						var users = [];
 						ee.forEach(function(f, ii) {
@@ -807,7 +807,7 @@
 
 							super_string = '';
 
-							$.get('http://192.168.43.13:8000/user?id=' + users, function(e) {
+							$.get('/user?id=' + users, function(e) {
 								string = '';
 								console.dir(e);
 								string += '\
@@ -938,7 +938,7 @@
 	var showHackathons = function () {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
 			$('#hackathonlist').fadeIn().promise().done(function(e) {
-			$.get('http://192.168.43.13:8000/hackathon', function(e) {
+			$.get('/hackathon', function(e) {
 				hackathons = e;
 				var hackathonhtml = "";
 				var hackathonsTemplate = $('#hackathonTpl').html();
