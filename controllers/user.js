@@ -155,6 +155,7 @@ exports.get_user = function (req, res, next) {
     var data = util.get_data(['id'], [], req.query),
         scps = [],
         sort = {},
+        condition = {},
         limit = 50,
         skip = 0,
         start = function () {
@@ -162,11 +163,13 @@ exports.get_user = function (req, res, next) {
 
             
             logger.log('verbose', 'Found id from url');
-            console.log(data.id);
-            (data.id.split(',')).forEach(function (sc) {
-                scps.push( { _id : ( sc.trim() * 1 ) } );
-            });
-
+            
+            if (data.id) {
+                (data.id.split(',')).forEach(function (sc) {
+                    scps.push( { _id : ( sc.trim() * 1 ) } );
+                });
+                condition = { $or: scps };
+            }
             req.query.highest_points && (sort.total_points = -1);
             req.query.most_badge     && (sort.badge_own = -1);
             req.query.most_hackathon && (sort.hackathons_joined = -1);
@@ -176,7 +179,7 @@ exports.get_user = function (req, res, next) {
         
 
             mongo.collection('user')
-            .find(  { $or: scps },
+            .find(  condition,
                     { github_access_token : 0}
                 )
             .sort(sort)
