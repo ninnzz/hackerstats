@@ -116,12 +116,12 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 team_info.hackathons.push(evt);
 
                 for (var j in user_info) {
-                    user_info[i].hackathons_joined ++;
+                    user_info[j].hackathons_joined ++;
                     if (evt.points !== 1) {
-                        user_info[i].hackathons_won ++;
+                        user_info[j].hackathons_won ++;
                     } 
-                    user_info[i].total_points += evt.points;
-                    user_info[i].hackathons.push(team_info);
+                    user_info[j].total_points += evt.points;
+                    user_info[j].hackathons.push(team_info);
                 }
 
                 console.log('=========TEAM INFO=========');
