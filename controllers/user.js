@@ -152,7 +152,7 @@ exports.auth_github_callback = function (req, res, next) {
 
 
 exports.get_user = function (req, res, next) {
-    var data = util.get_data(['id'], [], req.query),
+    var data,
         scps = [],
         sort = {},
         condition = {},
@@ -191,10 +191,6 @@ exports.get_user = function (req, res, next) {
             });
            
         };
-
-    if (typeof data === 'string') {
-        return next(data);
-    } 
 
     start();
 };
