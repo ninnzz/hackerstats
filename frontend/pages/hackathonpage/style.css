@@ -1,0 +1,94 @@
+#hackathonpage .hackers-container {
+	margin: 10px 15px 10px;
+	text-align: center;
+}
+
+#hackathonpage .fa {
+	color: #fff;
+}
+
+#hackathonpage .hackerstat-body-content {
+	margin: 60px;
+}
+
+#hackathonpage .hackathon-team-container a.avatar-container {
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	border-radius: 75px;
+	overflow: hidden;
+	position: relative;
+}
+
+#hackathonpage .hackathon-team-container a.avatar-container > img {
+	height: 100%;
+	width: 100%;
+}
+
+#hackathonpage .hackathon-team-container span.place {
+	display: block;
+	font-size: 24px;
+	text-align: center;
+}
+
+#hackathonpage .hackathon-team-container .badges-container {
+	text-align: center;
+	margin: 0 20px;
+}
+
+#hackathonpage .hackathon-team-container {
+	width: 400px;
+	background: #ffffff;
+	padding-top: 15px;
+	margin: 20px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	transition: box-shadow .5s;
+}
+
+#hackathonpage .hackathon-team-container:hover {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	transition: box-shadow .5s;
+}
+
+#hackathonpage .hackathon-team-container .hackerstats-badge {
+	width: 60px;
+	display: inline-block;
+}
+
+#hackathonpage .hackathon-team-container .hackerstats-badge img {
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+#hackathonpage .hackathon-team-container .hackerstats-badge .title {
+	display: block;
+	text-align: center;
+	font-size: 11px;
+}
+
+#hackathonpage .hackathon-team-container .bottom-details {
+	margin-top: 10px;
+	background-color: #D3D3D3;
+	color: #fff;
+	font-style: italic;
+}
+
+#hackathonpage .hackathon-team-container .bottom-details .before {
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffffff;
+	border-right: 20px solid transparent;
+}
+#hackathonpage .hackathon-team-container .bottom-details .after {
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffffff;
+	border-left: 20px solid transparent;
+}

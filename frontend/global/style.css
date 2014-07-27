@@ -1,0 +1,76 @@
+*, html, body {
+	font-family: 'Lato', sans-serif;
+}
+
+html, body {
+	background: #F0EFF1;
+}
+
+.hackerstat-content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* HEADER  */
+#mainHeader > nav{
+	background-color: transparent;
+	border: 0;
+}
+
+#mainHeader > nav > div {
+	margin: 0 -15px;
+}
+
+header {
+	width: 100%;
+	background-color: transparent;
+	color: #FFFFFF!important;
+	border-bottom: 1px solid #CCC;
+}
+
+header .navbar-header .navbar-brand {
+	padding:3px;
+}
+
+header .navbar-header .navbar-brand img {
+	height: 100%;
+}
+
+header .navbar-default .navbar-brand,
+header .navbar-default .navbar-brand:hover {
+	font-size: 26px;
+	color: #FFFFFF;
+}
+
+
+/* BODY */
+.hackerstat-body {
+	margin-top: 50px;
+	display: none;
+}
+
+.hackerstat-body.active {
+	display: block;
+}
+
+.hackerstat-content.hackerstat-body .hackerstat-body-content{
+	margin: 25px 60px;
+}
+
+/* MISC */
+.page-title {
+	height: 26px;
+	line-height: 26px;
+	margin-bottom: 50px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.page-title .point {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	background: #DC2922;
+	line-height: 15px;
+	border-radius: 15px;
+}
