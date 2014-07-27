@@ -175,6 +175,7 @@ exports.get_teams = function (req, res, next) {
         scps = [],
         sort = {},
         condition = {},
+        condition2 = {},
         limit = 50,
         skip = 0,
         start = function () {
@@ -187,6 +188,7 @@ exports.get_teams = function (req, res, next) {
                 (data.user_ids.split(',')).forEach(function (sc) {
                     scps.push( sc.trim() * 1 );
                 });
+                condition2 = { $all: scps };
             }
 
             if (req.query.hackathon_id) {
@@ -200,7 +202,7 @@ exports.get_teams = function (req, res, next) {
         
 
             mongo.collection('teams')
-            .find( { $all: scps },  condition)
+            .find( condition2,  condition)
             .sort(sort)
             .skip(skip)
             .limit(limit)
