@@ -98,7 +98,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 for(var i in hackathon_info.awards) {
                     if (hackathon_info.awards[i].code === req.body.awards) {
                         if (hackathon_info.awards[i].type === 1) {
-                           evt.points = parseInt(( ( hackathon_info.total_teams - ackathon_info.awards[i].rank ) / hackathon_info.total_teams ) * 10 );
+                           evt.points = parseInt(( ( hackathon_info.total_teams - hackathon_info.awards[i].rank ) / hackathon_info.total_teams ) * 10 );
                         } else {
                            evt.points = parseInt(( ( hackathon_info.total_teams - 1 ) / hackathon_info.total_teams ) * 9 );
                         }
