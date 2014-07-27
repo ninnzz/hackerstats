@@ -93,6 +93,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
             evt.team_name       = data.team_name;
             evt.project_link    = data.project_link;
             evt.points          = 1;
+            evt.team_members    = user_ids;
 
             if (req.body.awards) {
                 for(var i in hackathon_info.awards) {
