@@ -192,7 +192,7 @@ exports.get_teams = function (req, res, next) {
             }
 
             if (req.query.hackathon_id) {
-                condition.hackathons = {members : 1, $elemMatch: { hackathon_id:  req.query.hackathon_id } };
+                condition.hackathons = { $elemMatch: { hackathon_id:  req.query.hackathon_id } };
             }
             req.query.hackathon_id   && (sort.hackathons_joined = -1);
             
@@ -202,7 +202,7 @@ exports.get_teams = function (req, res, next) {
         
 
             mongo.collection('teams')
-            .find( condition2,  condition)
+            .find( condition2,  condition, {members : 1})
             .sort(sort)
             .skip(skip)
             .limit(limit)
