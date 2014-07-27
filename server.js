@@ -10,6 +10,9 @@ app.disable('x-powered-by');
 logger.log('verbose', 'Binding external middlewares');
 app.use(require('morgan')({format : 'dev', immediate : true}));
 app.use(require('morgan')({format : 'dev'}));
+
+app.use(express.static(__dirname + '/frontend'));
+
 app.use(require('method-override')());
 app.use(require('body-parser')({uploadDir : config.temp_dir}));
 app.use(require('connect-busboy')());
