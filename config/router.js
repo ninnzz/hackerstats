@@ -24,6 +24,7 @@ module.exports	= function (router, logger) {
 	
 	router.get ('/hackathon', 	hackathon.get_hackathon);
 
+	router.get ('/team', 	team.get_teams);
 	router.post ('/team/assign', 	team.add_team_to_hackathon);
 
 	router.post ('/admin/import_hackathon', 	admin.upload_hackathon_data);

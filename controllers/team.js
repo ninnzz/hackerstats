@@ -170,10 +170,11 @@ exports.add_team_to_hackathon = function (req, res, next) {
 };
 
 
-exports.get_user = function (req, res, next) {
-    var data = util.get_data(['id'], [], req.query),
+exports.get_teams = function (req, res, next) {
+    var data = util.get_data(['user_ids'], [], req.query),
         scps = [],
         sort = {},
+        condition = {},
         limit = 50,
         skip = 0,
         start = function () {
@@ -182,22 +183,22 @@ exports.get_user = function (req, res, next) {
             
             logger.log('verbose', 'Found id from url');
             console.log(data.id);
-            (data.id.split(',')).forEach(function (sc) {
-                scps.push( { _id : ( sc.trim() * 1 ) } );
+            (data.user_ids.split(',')).forEach(function (sc) {
+                scps.push( sc.trim() * 1 );
             });
 
+            if (req.query.hackathon_id) {
+                condition.hackathons = { $elemMatch: { hackathon_id:  req.query.hackathon_id } };
+            }
+            req.query.hackathon_id   && (sort.hackathons_joined = -1);
+            
             req.query.highest_points && (sort.total_points = -1);
-            req.query.most_badge     && (sort.badge_own = -1);
-            req.query.most_hackathon && (sort.hackathons_joined = -1);
-            req.query.most_win       && (sort.hackathons_won = -1);
             req.query.limit          && (limit = req.query.limit * 1);
             req.query.skip           && (skip = req.query.skip * 1);
         
 
-            mongo.collection('user')
-            .find(  { $or: scps },
-                    { github_access_token : 0}
-                )
+            mongo.collection('teams')
+            .find( { $all: scps },  condition)
             .sort(sort)
             .skip(skip)
             .limit(limit)
