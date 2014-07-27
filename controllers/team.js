@@ -124,7 +124,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
                     user_info[j].total_points += evt.points;
                     user_info[j].hackathons.push(team_info);
 
-                    mongo.collection('user').update( {_id : user_info._id }, user_info[j], function (err, _data) {
+                    mongo.collection('user').update( {_id : user_info[j]._id }, user_info[j], function (err, _data) {
                         if (err) {
                             console.log(err);
                         }
