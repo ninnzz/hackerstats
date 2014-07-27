@@ -1,5 +1,14 @@
+@font-face {
+	font-family: "Proxima Nova";
+	src: url("/assets/fonts/ProximaNovaCond-Light.otf") format("opentype");
+}
+@font-face {
+	font-family: "Proxima Nova Condensed";
+	font-weight : "light"
+	src: url("/assets/fonts/ProximaNovaCond-Light.otf") format("opentype");
+}
 *, html, body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Proxima Nova', 'Lato', sans-serif;
 }
 
 html, body {

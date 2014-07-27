@@ -30,7 +30,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#"><img src="/assets/images/logo.png" /></a>
+	      <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" /></a>
 	    </div>
 	    <div id="navbarCollapse" class="collapse navbar-collapse">
 		    <ul class="nav navbar-nav navbar-right">
@@ -55,62 +55,77 @@
 			var badges = [
     {
         "img": "ACTIVE.png",
+        name : 'RAMPAGE!!!',
         "description": "Join 5 hackathons!"
     },
     {
         "img": "AWESOME-THREESOME.png",
+        name : 'Threepeater',
         "description": "Join a hackathon with a group of 3"
     },
     {
         "img": "EXCEPTIONAL.png",
+        name : 'Exceptional',
         "description": "Win 5 hackathons!"
     },
     {
         "img": "EZ.png",
+        name : 'EZ',
         "description": "Too EZ. Win one hackathon"
     },
     {
         "img": "FRIENDS-FOREVER.png",
+        name : 'BFF',
         "description": "Join a hackathon as a pair"
     },
     {
         "img": "GANGHACK-STYLE.png",
+        name : 'GangHack',
         "description": "Join a hackathon with 4 or more members"
     },
     {
         "img": "HELLO-WORLD.png",
+        name : "Hello World!",
         "description": "Simply join a hackathon"
     },
     {
         "img": "LONE-WOLF.png",
+        name : "Lone Wolf!",
         "description": "Join a hackathon as a one-man team"
     },
     {
         "img": "MOMENTUM.png",
+        name : "Momentum",
         "description": "Win 5 time consecutively!"
     },
     {
         "img": "NONSTOP.png",
+        name : "Nonstop",
         "description": "Win 10 times consecutively! You MONSTER!"
     },
     {
         "img": "THREE-ROUNDER.png",
+        name : "Three Rounder",
         "description": "Win atleast 3 hackathons"
     },
     {
         "img": "TOP-HACKER.png",
+        name : "TOP HACKER",
         "description": "Dominate everyone by garnering the highest points!"
     },
     {
         "img": "TRIPLE-KILL.png",
+        name : "Triple Kill",
         "description": "Win 3 times consecutively!"
     },
     {
         "img": "VERY-ACTIVE.png",
+        name : "Enthusiast",
         "description": "Join atleast 5 hackathons"
     },
     {
         "img": "VERY-VERY-ACTIVE.png",
+        name : "Evangelist",
         "description": "Join atleast 10 hackathons"
     }
 ];
@@ -119,7 +134,7 @@
 				document.getElementById('badgesList').innerHTML += '\
 			<div class="hackerstats-badge" style="display : inline-block; margin : 5px;">\
 				<img src="/assets/images/' + a.img + '" width="64px" title="' + a.description + '"/>\
-				<br />' + a.img.toLowerCase().replace(/-/g, ' ').replace('.png', '') + '</div>';
+				<br />' + a.name + '</div>';
 			});
 		</script>
 
@@ -273,83 +288,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="pull-right winners">
-			<div class="team-container first">
-				<div class="hackers-container">
-					<a class="hacker" data-id="1" href="#">
-						<img src="https://avatars1.githubusercontent.com/u/3425521?s=460" />
-					</a>
-					<a class="hacker" data-id="1" href="#">
-						<img src="https://avatars1.githubusercontent.com/u/3439469?s=460" />
-					</a>
-					<a class="hacker" data-id="1" href="#">
-						<img src="https://avatars0.githubusercontent.com/u/3828145?s=460" />
-					</a>
-					<a class="hacker" data-id="1" href="#">
-						<img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/1658321_10202558069307352_428693750_o.jpg" />
-					</a>
-				</div>
-				<div class="details">
-					<span class="team-name">
-						EVIE HACKERS
-					</span>
-					<span class="award">
-						AngelHack Manila 2014 - 1st Place - 31 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-				</div>
-				<div class="triangle">
-					&nbsp;#1
-				</div>
-			</div>
-			<div class="team-container">
-				<div class="hackers-container">
-					<a class="hacker" data-id="1" href="#" title="Mark Steve Samson">
-						<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1560536_10202077884563336_1199753185_n.jpg?oh=d6488b661d803e8b4b647d75ce0b9b86&oe=5449B388&__gda__=1413904213_6540f2387d69daffebd4e4f510655209" />
-					</a>
-					<a class="hacker" data-id="1" href="#" title="Kat Padilla">
-						<img src="https://scontent-b-hkg.xx.fbcdn.net/hphotos-xap1/t31.0-8/10275374_807210045956031_6631545870408326766_o.jpg" />
-					</a>
-				</div>
-				<div class="details">
-					<span class="team-name">
-						MOOM MANES!
-					</span>
-					<span class="award">
-						Philippines TechCamp Hackathon 2014 - 1st Place - 13 points
-					</span>
-				</div>
-				<div class="triangle">
-					&nbsp;#2
-				</div>
-			</div>
-			<div class="team-container">
-				<div class="hackers-container">
-					<a class="hacker" data-id="1" title="Aaron Noel de Leon">
-						<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/t1.0-9/10525870_926706880678685_7839415961185055663_n.jpg" />
-					</a>
-					<a class="hacker" data-id="1" href="#" title="Joey Salac Hipolito">
-						<img src="https://scontent-b-hkg.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10402617_10203111508981984_8580586108141040296_n.jpg?oh=4563164697696dedaa31d2753057f50c&oe=54590FFE" />
-					</a>
-					<a class="hacker" data-id="1" href="#" title="Daryll Santos">
-						<img src="https://scontent-b-hkg.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1450955_10200122928150588_364994130_n.jpg?oh=e19bb30d1fcb7da9b55b67f7a3c5e490&oe=543A199E" />
-					</a>
-				</div>
-				<div class="details">
-					<span class="team-name">
-						Masama Bang Magmahal ng Iba
-					</span>
-					<span class="award">
-						Caritakathon 2013 - Participant
-					</span>
-				</div>
-				<div class="triangle">
-					&nbsp;#3
-				</div>
-			</div>
-		</div>
+		<div class="pull-right winners"></div>
 	</div>
 </div><div id="individual-profile" class="hackerstat-content hackerstat-body">
 	<div class="page-title">
@@ -460,113 +399,82 @@
 		<span class="point"></span>
 		<span class="text">TEAMS LEADERBOARD</span>
 	</div>
-	<div class="hackerstat-body-content clearfix">
-		<div class="team-container first">
-			<div class="hackers-container">
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
+	<div class="hackerstat-body-content clearfix" id="teams-inner">
+	</div>
+</div><div id="special-award" class="hackerstat-content hackerstat-body">
+	<div class="page-title">
+		<span class="point"></span>
+		<span class="text">SPECIAL AWARDS</span>
+	</div>
+	<div class="hackerstat-body-content clearfix" id="special-inner">
+		<span class="award-name" style="display:block; text-align:center; font-weight: bold; font-size: 24px">
+		TOP HACKER
+		</span>
+
+		<div class="award-container clearfix" style="background:#ffffff; padding: 20px; margin: 40px 20px">
+			<div class="pull-left clearfix" style="width: 49%; height: 200px; border-right: 2px solid #CECECE">
+				<div class="pull-left" style="width: 30%; margin-top: 18px">
+					<img src="https://avatars1.githubusercontent.com/u/3425521?s=460" style="width: 100px; height: 100px; border-radius: 150px; overflow:hidden; margin: 0 auto; "/>
+					<span style="font-size: 22px; font-weight: bold; color:red; display:block; text-align: center">98 points</span>
+					<span style="font-size: 22px; font-weight: bold; color:red; display:block; text-align: center">24 badges</span>
+				</div>
+				<div class="pull-right" style="width: 70%;">
+				 	<span style="display: block; font-weight: bold; font-size: 24px; text-align:center">RAVEN LAGRIMAS</span>
+				 	<style type="text/css">
+				 		.award-container .award {
+				 			display: block;
+				 			text-align: center;
+				 			font-size: 12px;
+				 		}
+				 	</style>
+				 	<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 52 points
+					</span>
+				</div>
 			</div>
-			<div class="details">
-				<span class="team-name">
-					EVIE HACKERS
-				</span>
-				<span class="award">
-					AngelHack Manila 2014 - 1st Place - 31 points
-				</span>
-				<span class="award">
-					Webgeek Devcup 2014 - 1st Place - 52 points
-				</span>
-			</div>
-			<span class="points">
-				91 points
-			</span>
-			<div class="triangle">
-				&nbsp;#1
-			</div>
-		</div>
-		<div class="team-container">
-			<div class="hackers-container">
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-			</div>
-			<div class="details">
-				<span class="team-name">
-					EVIE HACKERS
-				</span>
-				<span class="award">
-					AngelHack Manila 2014 - 1st Place - 31 points
-				</span>
-				<span class="award">
-					Webgeek Devcup 2014 - 1st Place - 52 points
-				</span>
-			</div>
-			<span class="points">
-				80 points
-			</span>
-			<div class="triangle">
-				&nbsp;#2
-			</div>
-		</div>
-		<div class="team-container">
-			<div class="hackers-container">
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-			</div>
-			<div class="details">
-				<span class="team-name">
-					EVIE HACKERS
-				</span>
-				<span class="award">
-					AngelHack Manila 2014 - 1st Place - 31 points
-				</span>
-				<span class="award">
-					Webgeek Devcup 2014 - 1st Place - 52 points
-				</span>
-			</div>
-			<span class="points">
-					91 points
-				</span>
-			<div class="triangle">
-				&nbsp;#3
+			<div class="pull-right" style="width: 49%; height: 200px">
+				<div class="pull-left" style="width: 30%; margin-top: 40px">
+					<img src="/assets/images/TOP-HACKER.png" style="width: 100px; height: 100px; border-radius: 150px; overflow:hidden; margin: 0 auto; "/>
+					<span style="font-size: 22px; font-weight: bold; color:red; display:block; text-align: center">Top Hacker</span>
+				</div>
+				<div class="pull-right" style="width: 70%; margin-top: 25px" id="badges">
+
+				</div>
+				<script type="text/javascript">
+					document.getElementById('badges').innerHTML = '';
+					badges.forEach(function (a) {
+						document.getElementById('badges').innerHTML += '\
+					<div class="hackerstats-badge" style="display : inline-block; margin : 5px; width: 40px">\
+						<img src="/assets/images/' + a.img + '" style="width: 100%" title="' + a.description + '" title="'+ a.name +'"/>';
+					});
+				</script>
 			</div>
 		</div>
 	</div>
@@ -577,7 +485,7 @@
 	</div>
 	<div class="hackerstat-body-content clearfix">
 		<div class="pull-left profile">
-			<div class="personal">
+			<div class="personal">h
 				<span class="points">193 total points</span>
 				<div class="user" onclick="showUser()">
 					<span class="image-container">
@@ -690,154 +598,7 @@
 		<span class="point"></span>
 		<span class="text">HACKER LEADERBOARD</span>
 	</div>
-	<div class="hackerstat-body-content clearfix">
-		<div class="team-container first">
-			<a class="hacker" data-id="1" href="#">
-				<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-			</a>
-			<div class="details">
-				<span class="team-name">
-					RAVEN LAGRIMAS
-				</span>
-				<span class="award">
-					AngelHack Manila 2014 - 1st Place - 31 points
-				</span>
-				<span class="award">
-					Webgeek Devcup 2014 - 1st Place - 52 points
-				</span>
-				<span class="award">
-					and 3 more...
-				</span>
-				<span class="points">
-					91 points
-				</span>
-			</div>
-			<div class="badges">
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-				<div class="hackerstats-badge">
-					<img src="/assets/images/HELLO-WORLD.png" />
-					<span class="title">hello</span>
-				</div>
-			</div>
-			<div class="triangle">
-				&nbsp;#1
-			</div>
-		</div>
-		<div class="clearfix">
-			<div class="team-container pull-left">
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<div class="details">
-					<span class="team-name">
-						RAVEN LAGRIMAS
-					</span>
-					<span class="award">
-						AngelHack Manila 2014 - 1st Place - 31 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-					<span class="award">
-						and 3 more...
-					</span>
-					<span class="points">
-						91 points
-					</span>
-				</div>
-				<div class="badges">
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-				</div>
-				<div class="triangle">
-					&nbsp;#2
-				</div>
-			</div>
-			<div class="team-container pull-right">
-				<a class="hacker" data-id="1" href="#">
-					<img src="https://scontent-a-hkg.xx.fbcdn.net/hphotos-xap1/t1.0-9/p173x172/994118_10152227492298144_3754049066746244698_n.jpg" />
-				</a>
-				<div class="details">
-					<span class="team-name">
-						RAVEN LAGRIMAS
-					</span>
-					<span class="award">
-						AngelHack Manila 2014 - 1st Place - 31 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-					<span class="award">
-						and 3 more...
-					</span>
-					<span class="points">
-						91 points
-					</span>
-				</div>
-				<div class="badges">
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-					<div class="hackerstats-badge">
-						<img src="/assets/images/HELLO-WORLD.png" />
-						<span class="title">hello</span>
-					</div>
-				</div>
-				<div class="triangle">
-					&nbsp;#3
-				</div>
-			</div>
-		</div>
+	<div class="hackerstat-body-content clearfix" id="leader-cont">
 	</div>
 </div><script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -857,17 +618,168 @@
 	var showTeams = function(e) {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
 				$('#teams').fadeIn().promise().done(function(e) {
+					$.getJSON('http://192.168.43.13:8000/team?highest_ponts=1', function (ee) {
+						super_string = '';
 
+						ee.forEach(function (b, ii) {
+
+							$.getJSON('http://192.168.43.13:8000/user?id='+b.members.join(','), function (e) {
+
+								string = '\
+								<div class="team-container '+((ii===0) ? 'first' : '')+'">\
+									<div class="hackers-container">';
+
+								e.forEach(function (a) {
+									string += '<a class="hacker" data-id="1" href="#">\
+										<img src="' + a.avatar+ '" />\
+									</a>';
+								});
+
+								string += '</div>\
+									<div class="details">\
+										<span class="team-name">\
+											'+b.hackathons[0].team_name+'\
+										</span>\
+										<span class="award">\
+											AngelHack Manila 2014 - 1st Place - 31 points\
+										</span>\
+										<span class="award">\
+											Webgeek Devcup 2014 - 1st Place - 52 points\
+										</span>\
+									</div>\
+									<span class="points">\
+										'+(100-((ii*10)+~~(Math.random()*10)))+' points\
+									</span>\
+									<div class="triangle">\
+										&nbsp;#'+(ii+1)+'\
+									</div>\
+								</div>';
+
+								super_string += string;
+
+								if (ii === ee.length - 1) {
+									$('#teams-inner').append(super_string);
+
+								}
+							});
+						});
+					});
 				});
 			});
 	};
 
 	var showHackers = function(e) {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
-				$('#hackers').fadeIn().promise().done(function(e) {
-
+			$('#hackers').fadeIn().promise().done(function(e) {
+				$.getJSON('http://192.168.43.13:8000/user?highest_ponts=1', function (e) {
+					var string = '<div class="team-container first">\
+						<a class="hacker" data-id="1" href="#">\
+							<img src="'+e[0].avatar+'" />\
+						</a>\
+						<div class="details">\
+							<span class="team-name">\
+								'+e[0].name+'\
+							</span>\
+							<span class="award">\
+								AngelHack Manila 2014 - 1st Place - 31 points\
+							</span>\
+							<span class="award">\
+								Webgeek Devcup 2014 - 1st Place - 52 points\
+							</span>\
+							<span class="award">\
+								and 3 more...\
+							</span>\
+							<span class="points">\
+								91 points\
+							</span>\
+						</div>\
+						<div class="badges">';
+							for(j=0, k=0; j<8; j++) {
+								bdg = badges[k+=(~~(Math.random()*3))%badges.length];
+								string+='<div class="hackerstats-badge">\
+									<img src="/assets/images/'+bdg['img']+'" />\
+									<span class="title">'+bdg['name']+'</span>\
+								</div>';
+							}
+						string+='</div>\
+						<div class="triangle">\
+							&nbsp;#1\
+						</div>\
+						</div>\
+					<div class="clearfix">\
+						<div class="team-container pull-left">\
+							<a class="hacker" data-id="1" href="#">\
+								<img src="'+e[1].avatar+'" />\
+							</a>\
+							<div class="details">\
+								<span class="team-name">\
+									'+e[1].name+'\
+								</span>\
+								<span class="award">\
+									AngelHack Manila 2014 - 1st Place - 31 points\
+								</span>\
+								<span class="award">\
+									Webgeek Devcup 2014 - 1st Place - 52 points\
+								</span>\
+								<span class="award">\
+									and 3 more...\
+								</span>\
+								<span class="points">\
+									91 points\
+								</span>\
+							</div>\
+							<div class="badges">';
+								for(j=0, k=0; j<4; j++) {
+									bdg = badges[k+=(~~(Math.random()*3))%badges.length];
+									string+='<div class="hackerstats-badge">\
+										<img src="/assets/images/'+bdg['img']+'" />\
+										<span class="title">'+bdg['name']+'</span>\
+									</div>';
+								}
+						string += '	</div>\
+							<div class="triangle">\
+								&nbsp;#2\
+							</div>\
+						</div>\
+						<div class="team-container pull-right">\
+							<a class="hacker" data-id="1" href="#">\
+								<img src="'+e[2].avatar+'" />\
+							</a>\
+							<div class="details">\
+								<span class="team-name">\
+									'+e[2].name+'\
+								</span>\
+								<span class="award">\
+									AngelHack Manila 2014 - 1st Place - 31 points\
+								</span>\
+								<span class="award">\
+									Webgeek Devcup 2014 - 1st Place - 52 points\
+								</span>\
+								<span class="award">\
+									and 3 more...\
+								</span>\
+								<span class="points">\
+									91 points\
+								</span>\
+							</div>\
+							<div class="badges">';
+								for(j=0, k=0; j<4; j++) {
+									bdg = badges[k+=(~~(Math.random()*3))%badges.length];
+									string+='<div class="hackerstats-badge">\
+										<img src="/assets/images/'+bdg['img']+'" />\
+										<span class="title">'+bdg['name']+'</span>\
+									</div>';
+								}
+						string+='</div>\
+							<div class="triangle">\
+								&nbsp;#3\
+							</div>\
+						</div>\
+					</div>';
+					$("#leader-cont").html(string);
 				});
 			});
+		});
 	}
 
 	var openHackathonDetails = function(id) {
@@ -876,22 +788,53 @@
 			$('.hackerstat-body').fadeOut().promise().done(function(e) {
 				$('#hackathondetails').fadeIn().promise().done(function(e) {
 
+					console.dir(hackathon);
+
+					$.get('http://192.168.43.13:8000/team?highest_ponts=1&id=' + id, function(e) {
+						var teams = e.value;
+						var users = [];
+						e.forEach(function(f, ii) {
+							users = [];
+							f.hackathons[0].team_members.forEach(function(e) {
+								users.push(e);
+							});
+							users = users.join(',');
+
+							$.get('http://192.168.43.13:8000/user?id=' + users, function(e) {
+								string = '';
+								console.dir(e);
+								string += '\
+								<div class="team-container ' + ((ii === 0) ? 'first': '') + '">\
+									<div class="hackers-container">';
+
+								e.forEach(function (a) {
+									string += '<a class="hacker" data-id="1" href="#" title="'+a.name+'">\
+												<img src="'+(a.avatar || '#')+'" />\
+											</a>';
+								});
+
+								string += '</div>\
+									<div class="details">\
+										<span class="team-name">\
+											'+f.hackathons[0].team_name+'\
+										</span>\
+										<span class="award">\
+											Philippines TechCamp Hackathon 2014 - 1st Place - 13 points\
+										</span>\
+									</div>\
+									<div class="triangle">\
+										&nbsp;#' + (ii + 1) + '\
+									</div>\
+								</div>';
+
+								console.log(string);
+								$('.winners')[0].innerHTML += string;
+							});
+						});
+					}, 'json');
+
 				});
 			});
-
-			$.get('/hackathon', function(e) {
-				var teams = e.value;
-				var users = [];
-				e.value.forEach(function(f) {
-					users = [];
-					f.hackers.forEach(function(e) {
-						users.push(e.id);
-					});
-					users = users.join(',');
-					$.get('/dummyjs/users.json?users='+users, function(e) {
-					});
-				});
-			}, 'json');
 		}
 
 		return false;
@@ -911,6 +854,14 @@
 
 				});
 			});
+	}
+
+	var showSA = function(e) {
+		$('.hackerstat-body').fadeOut().promise().done(function(e) {
+			$('#special-award').fadeIn().promise().done(function(e) {
+
+			});
+		});
 	}
 
 	var openHackathon = function(id, event) {
@@ -951,7 +902,8 @@
 		return null;
 	}
 
-	$('a.hacker').click(function(e) {
+	$('body').on('click', 'a.hacker', function(e) {
+		console.log('adsfdsaf');
 		showUser($(this).attr('data-id'));
 		e.stopPropagation();
 	});
@@ -976,7 +928,7 @@
 	var showHackathons = function () {
 		$('.hackerstat-body').fadeOut().promise().done(function(e) {
 			$('#hackathonlist').fadeIn().promise().done(function(e) {
-			$.get('http://54.214.176.172:8000/hackathon', function(e) {
+			$.get('http://192.168.43.13:8000/hackathon', function(e) {
 				hackathons = e;
 				var hackathonhtml = "";
 				var hackathonsTemplate = $('#hackathonTpl').html();
