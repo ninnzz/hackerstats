@@ -102,6 +102,8 @@ exports.add_team_to_hackathon = function (req, res, next) {
                         } else {
                            evt.points = parseInt(( ( hackathon_info.total_teams - 1 ) / hackathon_info.total_teams ) * 9 );
                         }
+                        hackathon_info.awards[i].team_name = data.team_name;
+                        hackathon_info.awards[i].team = user_ids;
                     }
                 }
             } 
@@ -113,7 +115,24 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 team_info.total_points = evt.points;
                 team_info.hackathons.push(evt);
 
-                console.log(team_info);
+                for (var j in user_info) {
+                    user_info[i].hackathons_joined ++;
+                    if (evt.points !== 1) {
+                        user_info[i].hackathons_won ++;
+                    } 
+                    user_info[i].total_points += evt.points;
+                    user_info[i].hackathons.push(team_info);
+                }
+
+                console.log('=========TEAM INFO=========');
+                console.log(team_info)
+                console.log('=========USERS=========');
+                console.log(user_info);
+                console.log('=========hackathon=========');
+                console.log(hackathon_info);
+
+                //update hackathon
+                //update user_entry
 
             } else {
                 //old team, update
