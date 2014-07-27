@@ -171,7 +171,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
 
 
 exports.get_teams = function (req, res, next) {
-    var data = util.get_data(['user_ids'], [], req.query),
+    var data = req.query,
         scps = [],
         sort = {},
         condition = {},
@@ -182,10 +182,12 @@ exports.get_teams = function (req, res, next) {
 
             
             logger.log('verbose', 'Found id from url');
-            console.log(data.id);
-            (data.user_ids.split(',')).forEach(function (sc) {
-                scps.push( sc.trim() * 1 );
-            });
+            
+            if (data.user_ids) {
+                (data.user_ids.split(',')).forEach(function (sc) {
+                    scps.push( sc.trim() * 1 );
+                });
+            }
 
             if (req.query.hackathon_id) {
                 condition.hackathons = { $elemMatch: { hackathon_id:  req.query.hackathon_id } };
