@@ -72,21 +72,21 @@
         "team_name": ""
     }, {
         "type": 0,
-        "rank": null,
+        "rank": 0,
         "code" : "special_1",
         "title": "Help the Government ",
         "team": "",
         "team_name": ""
     },{
         "type": 0,
-        "rank": null,
+        "rank": 0,
         "code" : "special_2",
         "title": "Inclusive Technology ",
         "team": "",
         "team_name": ""
     }, {
         "type": 0,
-        "rank": null,
+        "rank": 0,
         "code" : "special_3",
         "title": "Student Special Award",
         "team": "",
@@ -94,6 +94,6 @@
     }, {
         "code" : "regular",
         "title": "Participant",
-        "team": null
+        "team": ""
     }]
 }
