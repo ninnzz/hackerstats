@@ -74,7 +74,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
             hackathon_info = _data[0];
 
             user_info.forEach(function (usr) {
-                user_ids.push(usr);
+                user_ids.push(usr._id);
             });
 
             mongo.collection('teams')
