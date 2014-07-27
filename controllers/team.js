@@ -192,7 +192,7 @@ exports.get_teams = function (req, res, next) {
             }
 
             if (req.query.hackathon_id) {
-                condition.hackathons = {memebers : 1, $elemMatch: { hackathon_id:  req.query.hackathon_id } };
+                condition.hackathons = {members : 1, $elemMatch: { hackathon_id:  req.query.hackathon_id } };
             }
             req.query.hackathon_id   && (sort.hackathons_joined = -1);
             
