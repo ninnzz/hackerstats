@@ -125,11 +125,11 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 }
 
                 console.log('=========TEAM INFO=========');
-                console.log(team_info)
+                console.dir(team_info)
                 console.log('=========USERS=========');
-                console.log(user_info);
+                console.dir(user_info);
                 console.log('=========hackathon=========');
-                console.log(hackathon_info);
+                console.dir(hackathon_info);
 
                 //update hackathon
                 //update user_entry
