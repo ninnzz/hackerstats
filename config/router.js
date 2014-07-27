@@ -1,6 +1,7 @@
 var loc			= __dirname + '/../controllers/',
 	user 		= require(loc + 'user'),
 	hackathon 	= require(loc + 'hackathon'),
+	team	 	= require(loc + 'team'),
 	admin 		= require(loc + 'admin');
 
 module.exports	= function (router, logger) {
@@ -22,6 +23,8 @@ module.exports	= function (router, logger) {
 	router.put ('/user', 		user.update_user);
 	
 	router.get ('/hackathon', 	hackathon.get_hackathon);
+
+	router.post ('/team/assign', 	team.add_team_to_hackathon);
 
 	router.post ('/admin/import_hackathon', 	admin.upload_hackathon_data);
 	
