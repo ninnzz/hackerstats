@@ -139,7 +139,15 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 console.log('=========hackathon=========');
                 console.dir(hackathon_info);
 
-               mongo.collection('teams')
+                mongo.collection('hackathon').update( {_id : hackathon_info._id }, hackathon_info, function (err, _data) {
+                    if (err) {
+                        console.log(err);
+                    }
+                        console.log('Hackathon info changed');
+                } );
+
+
+                mongo.collection('teams')
                 .insert(team_info, function (err, _data) {
                     if (err) {
                         return next(err);
@@ -147,12 +155,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
                     res.send(team_info);
                 });
 
-                mongo.collection('hackathon').update( {_id : hackathon_info._id }, hackathon_info, function (err, _data) {
-                    if (err) {
-                        console.log(err);
-                    }
-                        console.log('Hackathon info changed');
-                } );
+                
 
             } else {
                 //old team, update
