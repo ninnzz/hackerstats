@@ -1,0 +1,131 @@
+#hackathondetails .hackathon {
+	width: 250px;
+	padding: 20px;
+	margin-top: 20px;
+	background: #fff;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#hackathondetails .winners {
+	width: 630px;
+}
+
+#hackathondetails .hackathon .image {
+	width: 80%;
+}
+
+#hackathondetails .hackathon span.date {
+	display: block;
+	text-align: center;
+	font-size: 10px;
+}
+
+#hackathondetails .hackathon div.clearfix{
+	margin-top: 20px;
+	font-size: 14px;
+	text-align: center;
+}
+
+#hackathondetails .team-container .hackers-container {
+	width: 60%;
+	text-align: center;
+	display: block;
+}
+
+#hackathondetails .team-container .details .team-name {
+	font-size: 26px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
+#hackathondetails .team-container .details .award {
+	font-size: 9px;
+	display: block;
+	text-align: center;
+}
+
+#hackathondetails .team-container {
+	width: 85%;
+	margin: 15px auto;
+	background: #fff;
+	padding: 20px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	transition: box-shadow .5s;
+}
+
+#hackathondetails .team-container:hover {
+	width: 85%;
+	margin: 15px auto;
+	background: #fff;
+	padding: 20px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	transition: box-shadow .5s;
+}
+
+
+#hackathondetails .team-container .triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid #FC0000;
+	border-right: 50px solid transparent;
+	position: absolute;
+	line-height: 75px;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+}
+
+#hackathondetails .team-container .hackers-container {
+	width: 56%;
+	display: inline-block;
+}
+
+#hackathondetails .team-container .hackers-container a.hacker {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 75px;
+	display: inline-block;
+}
+
+#hackathondetails .team-container .hackers-container a.hacker img {
+	height: 100%;
+	width: 100%;
+}
+
+#hackathondetails .team-container .details {
+	width: 43%;
+	display: inline-block;
+	
+}
+
+#hackathondetails .team-container.first {
+	width: 95%;
+	margin-top: 0px;
+}
+
+#hackathondetails .team-container.first .details {
+	width: 44%;
+}
+
+#hackathondetails .team-container.first .details .team-name {
+	font-size: 30px;
+}
+
+#hackathondetails .team-container.first .hackers-container {
+	width: 55%;
+}
+
+#hackathondetails .team-container.first .hackers-container a.hacker {
+	width: 55px;
+	height: 55px;
+}

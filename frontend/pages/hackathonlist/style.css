@@ -1,0 +1,62 @@
+#hackathonlist .hackathon-container {
+	cursor: pointer;
+	padding: 20px 30px;
+	background: #FEFEFE;
+	height: 130px;
+	margin: 25px 60px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	transition: box-shadow .5s;
+}
+
+#hackathonlist .participants:hover {
+	text-decoration: underline;
+}
+
+#hackathonlist.hackerstat-content.hackerstat-body .hackerstat-body-content {
+	margin: 0;
+}
+
+#hackathonlist .hackathon-container:hover {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	transition: box-shadow .5s;
+}
+
+#hackathonlist .hackathon-container > * {
+	float: left;
+	line-height: 90px;
+}
+
+#hackathonlist .hackathon-container .image {
+	height: 70px;
+	margin: 10px 0;
+	width: 40%;
+}
+
+#hackathonlist .hackathon-container .date {
+	width: 25%;
+	text-align: center;
+}
+
+#hackathonlist .hackathon-container .participants {
+	width: 25%;
+	text-align: center;
+}
+
+#hackathonlist .hackathon-container .details-button {
+	width: 10%;
+	text-align: center;
+}
+
+#hackathonlist .hackathon-container .details-button a:hover > i {
+	font-weight: bold;
+	color: #000;
+}
+
+#hackathonlist .hackathon-container .details-button a > i {
+	line-height: 90px;
+	color: #646464;
+}

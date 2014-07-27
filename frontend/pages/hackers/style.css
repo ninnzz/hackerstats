@@ -1,0 +1,164 @@
+#hackers .team-container .hackers-container {
+	width: 60%;
+	text-align: center;
+	display: block;
+}
+
+#hackers .team-container .details .team-name {
+	font-size: 21px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
+#hackers .team-container .details .award {
+	font-size: 9px;
+	display: block;
+	text-align: center;
+}
+
+#hackers .team-container:not(.first) {
+	padding: 5px;
+}
+
+#hackers .team-container {
+	cursor: pointer;
+	width: 49%;
+	margin: 15px auto;
+	background: #fff;
+	padding: 20px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	transition: box-shadow .5s;
+}
+
+#hackers .team-container:hover {
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	transition: box-shadow .5s;
+}
+
+
+#hackers .team-container .triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid #FC0000;
+	border-right: 50px solid transparent;
+	position: absolute;
+	line-height: 75px;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+}
+
+#hackers .team-container .hackers-container {
+	width: 46%;
+	display: inline-block;
+}
+
+#hackers .team-container.first a.hacker {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	border-radius: 90px;
+	display: inline-block;
+}
+
+#hackers .team-container a.hacker {
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 90px;
+	display: inline-block;
+}
+
+#hackers .team-container a.hacker img {
+	height: 100%;
+	width: 100%;
+}
+
+#hackers .team-container .details {
+	width: 53%;
+	height: 120px;
+	vertical-align: top;
+	display: inline-block;
+	border-right:2px solid #CCC;
+}
+
+#hackers .team-container:not(.first) .details {
+	padding-top: 10px;
+}
+
+#hackers .team-container.first .badges {
+	width: 38%;
+	display: inline-block;
+}
+
+#hackers .badges{
+	text-align: center;
+}
+
+#hackers .badges .hackerstats-badge {
+	width: 60px;
+	display: inline-block;
+}
+
+#hackers .badges .hackerstats-badge img {
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+}
+
+#hackers .badges .hackerstats-badge .title {
+	display: block;
+	text-align: center;
+	font-size: 11px;
+}
+
+
+#hackers .team-container.first {
+	width: 80%;
+	margin-top: 0px;
+}
+
+#hackers .team-container:not(.first) a.hacker {
+	margin-top: 25px;
+	vertical-align: top;
+}
+
+#hackers .team-container.first .details {
+	width: 45%;
+	height: 122px;
+	vertical-align: top;
+}
+
+#hackers .team-container .details .points {
+	display: block;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	color: red
+}
+
+#hackers .team-container.first .details .team-name {
+	font-size: 30px;
+}
+
+#hackers .team-container.first .hackers-container {
+	width: 45%;
+}
+
+#hackers .team-container .hackers-container a.hacker {
+	width: 50px;
+	height: 50px;
+}
+
+#hackers .team-container .badges {
+	width: 30%;
+	display: inline-block;
+}

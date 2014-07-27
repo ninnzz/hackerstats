@@ -1,0 +1,237 @@
+#team-profile .hackerstat-body-content {
+	margin-right: 0;
+}
+
+#team-profile .shortdesc {
+	font-size: 8px;
+	font-style: italic;
+}
+
+#team-profile .profile .personal {
+	width: 260px;
+	background-color: #FFF;
+	position: relative;
+}
+
+#team-profile .profile .personal .points {
+	display: block;
+	background: #DC1E1E;
+	color:#FFFFFF;
+	text-align: center;
+}
+
+#team-profile .profile .personal .efficiency {
+	font-size: 88px;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	line-height: 65px;
+}
+
+#team-profile .profile .personal .efficiency-desc {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+	display: block;
+}
+
+#team-profile .profile .personal .user {
+	text-align: center;
+	margin: 5px 0;
+}
+
+#team-profile .profile .personal .user .image-container {
+	width: 50px;
+	height:50px;
+	border-radius: 50px;
+	display:inline-block;
+	overflow: hidden;
+}
+
+#team-profile .profile .personal .user .name {
+	height: 50px;
+	font-size: 18px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 50px;
+}
+
+#team-profile .profile .personal .user .image-container > img{
+	width: 100%;
+	height: 100%;
+}
+
+#team-profile .profile .personal .quotation {
+	display: block;
+	font-size: 12px;
+	text-align:center;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+#team-profile .hackathon .repo i {
+	width: 20px;
+}
+
+#team-profile .hackathon .repo a {
+	color: #000;
+}
+
+#team-profile .profile .personal ul.links {
+	list-style: none;
+}
+
+#team-profile .profile .personal ul.links > li {
+	margin: 10px 0;
+}
+
+#team-profile .profile .personal ul.links > li i {
+	width: 20px;
+}
+
+#team-profile .profile .personal ul.links > li a {
+	margin-left: 10px;
+	color: #000;
+}
+
+#team-profile .personal .bottom-details {
+	margin-top: 10px;
+	background-color: #D3D3D3;
+	color: #fff;
+	font-style: italic;
+}
+
+#team-profile .personal .bottom-details .before {
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffffff;
+	border-right: 20px solid transparent;
+}
+#team-profile .personal .bottom-details .after {
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffffff;
+	border-left: 20px solid transparent;
+}
+
+#team-profile .personal .bottom-details {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#team-profile .profile .badges {
+	background-color: #FFFFFF;
+	width: 260px;
+	margin-top: 20px;
+}
+
+#team-profile .profile .header {
+	background: #DC1E1E;
+	display: block;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+#team-profile .profile .badges-container {
+	padding: 10px;
+	text-align: center;
+}
+
+#team-profile .profile .badges-container .hackerstats-badge {
+	width: 55px;
+	display: inline-block;
+}
+
+#team-profile .profile .badges-container .hackerstats-badge > img {
+	width: 55px;
+	height: 55px;
+	margin: 0 auto;
+	
+}
+
+#team-profile .profile .badges-container .hackerstats-badge > .title {
+	display: block;
+	text-align: center;
+	font-size: 12px;	
+}
+
+#team-profile .hackathons {
+	width: 645px;
+}
+
+#team-profile .hackathons .hackathon:first-of-type {
+	margin-top: 0!important;
+}
+
+#team-profile .hackathons .hackathon {
+	position: relative;
+	padding: 10px;
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.2);
+	transition: box-shadow .5s;
+}
+
+#team-profile .hackathons .hackathon:hover {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.4);
+	transition: box-shadow .5s;
+}
+
+#team-profile .hackathons .hackathon .points {
+	position: absolute;
+	top:0;
+	right:5px;
+	font-weight: bold;
+	color: red;
+}
+
+#team-profile .hackathons .hackathon .left {
+	width: 190px;
+	text-align: center;
+	position: relative;
+}
+
+#team-profile .hackathons .hackathon .left > .image {
+	width: 180px;
+}
+
+#team-profile .hackathons .hackathon .left .date {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	margin: 10px 0;
+}
+
+#team-profile .hackathons .hackathon .left .stack-label {
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+#team-profile .hackathons .hackathon .left .stack {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+#team-profile .hackathons .hackathon .right {
+	width: 420px;
+}
+
+#team-profile .hackathons .hackathon .right .place {
+	font-size: 21px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+
+#team-profile .hackathons .hackathon .right .description {
+	text-align: justify;
+}
