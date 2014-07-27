@@ -279,11 +279,11 @@
 	<div class="hackerstat-body-content clearfix">
 		<div class="pull-left">
 			<div class="hackathon">
-				<img class="image" src="http://www.angelhack.com/wp-content/uploads/2013/11/angelhack.png" />
-				<span class="title">AngelHack Manila Spring2014</span>
-				<span class="date">July 26-27, 2014</span>
+				<img class="image" src="http://www.angelhack.com/wp-content/uploads/2013/11/angelhack.png" id="evie_img"/>
+				<span class="title" id="evie_span">AngelHack Manila Spring2014</span>
+				<span class="date" id="evie_date">July 26-27, 2014</span>
 				<div class="clearfix">
-					<span class="participants">52 teams participated</span>
+					<span class="participants" id="evie_participants">52 teams participated</span>
 					<a class="pull-right"><i class="fa fa-external-link"></i></a>
 				</div>
 			</div>
@@ -321,7 +321,7 @@
 			</div>
 
 			<div class="badges">
-				<span class="header">Collected Badges (16)</span>
+				<span class="header">Collected Badges (1)</span>
 				<div class="badges-container">
 					<div class="hackerstats-badge">
 						<img src="/assets/images/TOP-HACKER.png" />
@@ -428,34 +428,34 @@
 				 		}
 				 	</style>
 				 	<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
+						AngelHack Manila Spring 2014 - 1st Place - 52 points
+					</span>
+					<span class="award">
+						AngelHack Fall 2014 - 1st Place - 38 points
+					</span>
+					<span class="award">
+						Webgeek Devcup 2014 - 1st Place - 21 points
+					</span>
+					<span class="award">
+						Caritakathon 2015 - 1st Place - 41 points
 					</span>
 					<span class="award">
 						Webgeek Devcup 2014 - 1st Place - 52 points
 					</span>
 					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
+						Webgeek Devcup 2014 - 1st Place - 32 points
 					</span>
 					<span class="award">
 						Webgeek Devcup 2014 - 1st Place - 52 points
 					</span>
 					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
+						Caritakathon 2015 - 1st Place - 52 points
 					</span>
 					<span class="award">
 						Webgeek Devcup 2014 - 1st Place - 52 points
 					</span>
 					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
-					</span>
-					<span class="award">
-						Webgeek Devcup 2014 - 1st Place - 52 points
+						AngelHack Manila Spring 2015 - 1st Place - 64 points
 					</span>
 				</div>
 			</div>
@@ -790,15 +790,22 @@
 
 					console.dir(hackathon);
 
-					$.get('http://192.168.43.13:8000/team?highest_ponts=1&id=' + id, function(e) {
-						var teams = e.value;
+					$('#evie_img')[0].setAttribute('src', hackathon.image);
+					$('#evie_span').html(hackathon.name);
+					$('#evie_date').html(hackathon.duration);
+					$('#evie_participants').html(hackathon.total_teams + ' teams participated');
+
+					$.get('http://192.168.43.13:8000/team?highest_ponts=1&id=' + id, function(ee) {
+						var teams = ee.value;
 						var users = [];
-						e.forEach(function(f, ii) {
+						ee.forEach(function(f, ii) {
 							users = [];
 							f.hackathons[0].team_members.forEach(function(e) {
 								users.push(e);
 							});
 							users = users.join(',');
+
+							super_string = '';
 
 							$.get('http://192.168.43.13:8000/user?id=' + users, function(e) {
 								string = '';
@@ -827,8 +834,11 @@
 									</div>\
 								</div>';
 
-								console.log(string);
-								$('.winners')[0].innerHTML += string;
+								super_string += string;
+
+								if (ii === ee.length - 1) {
+									$('.winners')[0].innerHTML = super_string;
+								}
 							});
 						});
 					}, 'json');
@@ -937,7 +947,6 @@
 					var end = start.split(',');
 					end[0]+='-'+moment(e.end_date*1000).format("DD");
 					e.duration = end.join(',');
-					console.log(e);
 					hackathonhtml += template(hackathonsTemplate, e);
 				});
 
