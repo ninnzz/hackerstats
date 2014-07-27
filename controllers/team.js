@@ -93,6 +93,7 @@ exports.add_team_to_hackathon = function (req, res, next) {
             evt.team_name       = data.team_name;
             evt.project_link    = data.project_link;
             evt.points          = 1;
+            evt.team_members    = user_ids;
 
             if (req.body.awards) {
                 for(var i in hackathon_info.awards) {
@@ -122,6 +123,13 @@ exports.add_team_to_hackathon = function (req, res, next) {
                     } 
                     user_info[j].total_points += evt.points;
                     user_info[j].hackathons.push(team_info);
+
+                    mongo.collection('user').update( {_id : user_info._id }, user_info[j], function (err, _data) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        console.log('User info changed');
+                    } );
                 }
 
                 console.log('=========TEAM INFO=========');
@@ -131,8 +139,20 @@ exports.add_team_to_hackathon = function (req, res, next) {
                 console.log('=========hackathon=========');
                 console.dir(hackathon_info);
 
-                //update hackathon
-                //update user_entry
+               mongo.collection('teams')
+                .insert(team_info, function (err, _data) {
+                    if (err) {
+                        return next(err);
+                    }
+                    res.send(team_info);
+                });
+
+                mongo.collection('hackathon').update( {_id : hackathon_info._id }, hackathon_info, function (err, _data) {
+                    if (err) {
+                        console.log(err);
+                    }
+                        console.log('Hackathon info changed');
+                } );
 
             } else {
                 //old team, update
@@ -151,10 +171,12 @@ exports.add_team_to_hackathon = function (req, res, next) {
 };
 
 
-exports.get_user = function (req, res, next) {
-    var data = util.get_data(['id'], [], req.query),
+exports.get_teams = function (req, res, next) {
+    var data = req.query,
         scps = [],
         sort = {},
+        condition = {},
+        condition2 = {},
         limit = 50,
         skip = 0,
         start = function () {
@@ -162,23 +184,26 @@ exports.get_user = function (req, res, next) {
 
             
             logger.log('verbose', 'Found id from url');
-            console.log(data.id);
-            (data.id.split(',')).forEach(function (sc) {
-                scps.push( { _id : ( sc.trim() * 1 ) } );
-            });
+            
+            if (data.user_ids) {
+                (data.user_ids.split(',')).forEach(function (sc) {
+                    scps.push( sc.trim() * 1 );
+                });
+                condition2 = { $all: scps };
+            }
 
+            if (req.query.hackathon_id) {
+                condition.hackathons = { $elemMatch: { hackathon_id:  req.query.hackathon_id } };
+            }
+            req.query.hackathon_id   && (sort.hackathons_joined = -1);
+            
             req.query.highest_points && (sort.total_points = -1);
-            req.query.most_badge     && (sort.badge_own = -1);
-            req.query.most_hackathon && (sort.hackathons_joined = -1);
-            req.query.most_win       && (sort.hackathons_won = -1);
             req.query.limit          && (limit = req.query.limit * 1);
             req.query.skip           && (skip = req.query.skip * 1);
         
 
-            mongo.collection('user')
-            .find(  { $or: scps },
-                    { github_access_token : 0}
-                )
+            mongo.collection('teams')
+            .find( condition2,  condition)
             .sort(sort)
             .skip(skip)
             .limit(limit)
