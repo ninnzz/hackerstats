@@ -43,7 +43,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
-<div id="landingPage" class="hackerstat-content hackerstat-body active">
+<div id="landingPage" class="hackerstat-content hackerstat-body">
 	<div class="hackerstat-body-content" style="text-align: center;">
 		<br /><br /><br />
 		<img src="/assets/images/logo.png" />
@@ -922,6 +922,8 @@
 		showTeam($(this).attr('data-id') ? $(this).attr('data-id') : 1);
 		e.stopPropagation();
 	})
+	
+	$('#landingPage').fadeIn();
 </script>
 
 <script type="text/html" id="hackathonTpl">
